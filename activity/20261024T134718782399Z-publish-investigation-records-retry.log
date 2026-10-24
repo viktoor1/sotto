@@ -1,0 +1,165 @@
+Running: git init -b evidence/637-investigation
+Initialized empty Git repository in /tmp/sotto-637-evidence-jy4e51gv/.git/
+Running: git remote add origin https://github.com/viktoor1/sotto.git
+Running: git config user.name Ivanov Viktor
+Running: git config user.email iviktoor10@gmail.com
+Issue-specific evidence files copied: 137
+Running: git add --all
+Running: git diff --cached --check -- README.md repair-review.md discovery-path.md pr-body.md publish-evidence.py
+Running: git commit --signoff -m docs: record Sotto #637 investigation and verification
+[evidence/637-investigation (root-commit) ed8541c] docs: record Sotto #637 investigation and verification
+ 137 files changed, 21769 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 activity.jsonl
+ create mode 100644 activity/20261024-issue-637-embedded.json
+ create mode 100644 activity/20261024-issue-637.html
+ create mode 100644 activity/20261024-open-prs-page-2.html
+ create mode 100644 activity/20261024-open-prs-page-3.html
+ create mode 100644 activity/20261024-open-prs-page-4.html
+ create mode 100644 activity/20261024-open-prs-page-5.html
+ create mode 100644 activity/20261024-open-prs.html
+ create mode 100644 activity/20261024T131505458281Z-restored-state.log
+ create mode 100644 activity/20261024T131505575722Z-contribution-instructions.log
+ create mode 100644 activity/20261024T131526762481Z-public-discussion.log
+ create mode 100644 activity/20261024T131549555095Z-public-issue-html.log
+ create mode 100644 activity/20261024T131549557469Z-regression-before-repair.log
+ create mode 100644 activity/20261024T131558167354Z-inspect-public-issue-data.log
+ create mode 100644 activity/20261024T131607090333Z-current-discussion-evidence.log
+ create mode 100644 activity/20261024T131607179358Z-regression-diff.log
+ create mode 100644 activity/20261024T131626110753Z-public-open-prs.log
+ create mode 100644 activity/20261024T131626110754Z-stage-3-final-check.log
+ create mode 100644 activity/20261024T131637950076Z-open-pr-page-status.log
+ create mode 100644 activity/20261024T131649055785Z-public-pr-links.log
+ create mode 100644 activity/20261024T131708647767Z-complete-open-pr-review.log
+ create mode 100644 activity/20261024T131815890229Z-pr-pagination-diagnosis.log
+ create mode 100644 activity/20261024T131830671224Z-reviewed-open-pr-titles.log
+ create mode 100644 activity/20261024T131858738160Z-save-reproduction-evidence.log
+ create mode 100644 activity/20261024T132001517513Z-repair-start-state.log
+ create mode 100644 activity/20261024T132020202549Z-deferred-test-patterns.log
+ create mode 100644 activity/20261024T132039556157Z-regression-after-repair.log
+ create mode 100644 activity/20261024T132048957816Z-deferred-helper-reference.log
+ create mode 100644 activity/20261024T132147054493Z-recovery-matrix.log
+ create mode 100644 activity/20261024T132153355817Z-repair-diff-review.log
+ create mode 100644 activity/20261024T132153411463Z-production-repair-diff.log
+ create mode 100644 activity/20261024T132223113869Z-request-lock-negative-control.log
+ create mode 100644 activity/20261024T132252227065Z-current-upstream-main.log
+ create mode 100644 activity/20261024T132306450077Z-proposed-test-review.log
+ create mode 100644 activity/20261024T132316814863Z-upstream-comparison.log
+ create mode 100644 activity/20261024T132423968881Z-prepare-current-branch.log
+ create mode 100644 activity/20261024T132432723771Z-refresh-upstream-web-dependencies.log
+ create mode 100644 activity/20261024T132522455466Z-final-typescript.log
+ create mode 100644 activity/20261024T132522458834Z-final-web-suite.log
+ create mode 100644 activity/20261024T132541756593Z-final-review-locations.log
+ create mode 100644 activity/20261024T132542112105Z-final-source-diff.log
+ create mode 100644 activity/20261024T132623040930Z-final-scope-integrity.log
+ create mode 100644 activity/20261024T132701019247Z-solution-patch-verification.log
+ create mode 100644 activity/20261024T132736816835Z-web-run-progress.log
+ create mode 100644 activity/20261024T132755099872Z-base64-isolated-timeout-investigation.log
+ create mode 100644 activity/20261024T132845829180Z-base64-failure-scope.log
+ create mode 100644 activity/20261024T132929540586Z-unchanged-upstream-timeout-check.log
+ create mode 100644 activity/20261024T133001570244Z-frontend-ci-runtime.log
+ create mode 100644 activity/20261024T133020151552Z-final-payer-transfer-suite.log
+ create mode 100644 activity/20261024T133037278711Z-final-production-web-build.log
+ create mode 100644 activity/20261024T133319635643Z-final-solution-manifest.log
+ create mode 100644 activity/20261024T133407856604Z-package-reviewed-evidence.log
+ create mode 100644 activity/20261024T134236367338Z-submission-preflight.log
+ create mode 100644 activity/20261024T134321227338Z-github-api-submission-access.log
+ create mode 100644 activity/20261024T134321297177Z-fork-submission-access.log
+ create mode 100644 activity/20261024T134322562253Z-upstream-submission-head.log
+ create mode 100644 activity/20261024T134353705952Z-commit-reviewed-repair.log
+ create mode 100644 activity/20261024T134442623949Z-push-reviewed-repair.log
+ create mode 100644 activity/20261024T134520381566Z-verify-pushed-repair.log
+ create mode 100644 activity/20261024T134522506503Z-evidence-branch-preflight.log
+ create mode 100644 activity/20261024T134658684991Z-publish-investigation-records.log
+ create mode 100644 baseline-probe-backup/web/src/PayerTransferStart.tsx
+ create mode 100644 baseline-probe-backup/web/src/__tests__/PayerTransferJourneys.test.tsx
+ create mode 100644 before-upstream-update-20261024T132424Z/original-base-repair.patch
+ create mode 100644 before-upstream-update-20261024T132424Z/ours/web/src/PayerTransferStart.tsx
+ create mode 100644 before-upstream-update-20261024T132424Z/ours/web/src/__tests__/PayerTransferJourneys.test.tsx
+ create mode 100644 before-upstream-update-20261024T132424Z/prepared/web/src/PayerTransferStart.tsx
+ create mode 100644 before-upstream-update-20261024T132424Z/prepared/web/src/__tests__/PayerTransferJourneys.test.tsx
+ create mode 100644 before-upstream-update-20261024T132424Z/preservation.json
+ create mode 100644 before-upstream-update-20261024T132424Z/upstream/web/src/PayerTransferStart.tsx
+ create mode 100644 before-upstream-update-20261024T132424Z/upstream/web/src/__tests__/PayerTransferJourneys.test.tsx
+ create mode 100644 build_walkthrough.py
+ create mode 100644 check-public-discussion.py
+ create mode 100644 cloud-recovery-20261024.md
+ create mode 100644 commit-message.txt
+ create mode 100644 discovery-path.md
+ create mode 100644 evidence-manifest.json
+ create mode 100644 focus-refinement.css
+ create mode 100644 focus-refinement.js
+ create mode 100644 gpt-inspection.json
+ create mode 100644 gpt-inspection.png
+ create mode 100644 historical-issue-evidence/issue-637-baseline.log
+ create mode 100644 historical-issue-evidence/issue-637-pr-search.html
+ create mode 100644 historical-issue-evidence/issue-637-text.txt
+ create mode 100644 historical-issue-evidence/issue-637.html
+ create mode 100644 history/before-focus-refinement-20261021-025128/build_walkthrough.py
+ create mode 100644 history/before-focus-refinement-20261021-025128/evidence-manifest.json
+ create mode 100644 history/before-focus-refinement-20261021-025128/interactive-walkthrough.html
+ create mode 100644 history/before-focus-refinement-20261021-025128/task-journal.md
+ create mode 100644 history/before-focus-refinement-20261021-025128/validation-report.json
+ create mode 100644 history/before-focus-refinement-20261021-025128/validation.log
+ create mode 100644 history/before-focus-refinement-20261021-025128/visual-walkthrough.md
+ create mode 100644 history/before-focus-refinement-20261021-025128/walkthrough-template.html.in
+ create mode 100644 interactive-walkthrough.html
+ create mode 100644 package-evidence.py
+ create mode 100644 pr-body.md
+ create mode 100644 prepare-current-branch.py
+ create mode 100644 publish-evidence.py
+ create mode 100644 pull-request-draft.md
+ create mode 100644 record-command.py
+ create mode 100644 refinement-validation-export.json
+ create mode 100644 refinement-validation-report.json
+ create mode 100644 refinement-validation.log
+ create mode 100644 repair-review.md
+ create mode 100644 request-lock-probe.json
+ create mode 100644 review-checkpoint/README.md
+ create mode 100644 review-checkpoint/discovery-path.md
+ create mode 100644 review-checkpoint/pull-request-draft.md
+ create mode 100644 review-checkpoint/repair-review.md
+ create mode 100644 review-checkpoint/solution-manifest.json
+ create mode 100644 shareable-bundle-manifest.json
+ create mode 100644 solution-files/web/src/PayerTransferStart.tsx
+ create mode 100644 solution-files/web/src/__tests__/PayerTransferJourneys.test.tsx
+ create mode 100644 solution-manifest.json
+ create mode 100644 solution.patch
+ create mode 100644 stage-3-regression.patch
+ create mode 100644 stage-3-reproduction.json
+ create mode 100644 task-journal.md
+ create mode 100644 upstream-baseline-probe.json
+ create mode 100644 validate-walkthrough.mjs
+ create mode 100644 validation-export.json
+ create mode 100644 validation-report.json
+ create mode 100644 validation.log
+ create mode 100644 verify-request-lock.py
+ create mode 100644 verify-upstream-baseline.py
+ create mode 100644 visual-walkthrough.md
+ create mode 100644 walkthrough-desktop.png
+ create mode 100644 walkthrough-embedded.png
+ create mode 100644 walkthrough-failure.png
+ create mode 100644 walkthrough-mobile.png
+ create mode 100644 walkthrough-refined-desktop.png
+ create mode 100644 walkthrough-refined-embedded.png
+ create mode 100644 walkthrough-refined-failure.png
+ create mode 100644 walkthrough-refined-mobile.png
+ create mode 100644 walkthrough-template.html
+ create mode 100644 walkthrough-template.html.in
+Running: git push --set-upstream origin HEAD:refs/heads/evidence/637-investigation
+remote: 
+remote: Create a pull request for 'evidence/637-investigation' on GitHub by visiting:        
+remote:      https://github.com/viktoor1/sotto/pull/new/evidence/637-investigation        
+remote: 
+To https://github.com/viktoor1/sotto.git
+ * [new branch]      HEAD -> evidence/637-investigation
+branch 'evidence/637-investigation' set up to track 'origin/evidence/637-investigation'.
+{
+  "publishedAt": "2026-10-24T13:47:22.125087+00:00",
+  "branch": "evidence/637-investigation",
+  "commit": "ed8541c16b51a58ef6332370065d33a243e06cc7",
+  "fileCount": 137,
+  "url": "https://github.com/viktoor1/sotto/tree/evidence/637-investigation",
+  "codeCommit": "e879c71f0e5a5d1b9e3d1219a89f80e7c5c040b8",
+  "scope": "authorised issue-specific documentation, HTML, journal and evidence only"
+}

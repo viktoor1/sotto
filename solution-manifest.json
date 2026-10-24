@@ -169,5 +169,7 @@
   "commit": "e879c71f0e5a5d1b9e3d1219a89f80e7c5c040b8",
   "codeBranchPushed": true,
   "pullRequestCreated": false,
-  "publicationStatus": "Code pushed; evidence publication and PR creation in progress"
+  "publicationStatus": "Code and evidence pushed; GitHub API Forbidden; browser PR creation prepared",
+  "evidenceBranchPublished": true,
+  "browserInstructions": "OPEN-PR.md"
 }

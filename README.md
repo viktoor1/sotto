@@ -2,7 +2,7 @@
 
 Open **`interactive-walkthrough.html`** to explore the investigation. It is a self-contained HTML application: its styles, scripts, source excerpts, baseline evidence and selected journal checkpoints are embedded. It needs no npm installation or build step.
 
-Contribution progress after that snapshot is recorded in [discovery-path.md](discovery-path.md), [task-journal.md](task-journal.md) and [activity.jsonl](activity.jsonl). The 24 October reproduction remains recorded as an expected failure against original production code. The contributor has reviewed and approved the repair; commit `e879c71` is signed off and pushed to the fork. Evidence publication and PR creation are in progress. [repair-review.md](repair-review.md) covers nine new regression cases and validation: 28 focused tests passed; TypeScript and build passed; the full web suite has one existing Base64 timeout reproduced on clean upstream. Earlier walkthrough validation reports remain unchanged and refer to their historical source snapshot.
+Contribution progress after that snapshot is recorded in [discovery-path.md](discovery-path.md), [task-journal.md](task-journal.md) and [activity.jsonl](activity.jsonl). The 24 October reproduction remains recorded as an expected failure against original production code. The contributor has reviewed and approved the repair; commit `e879c71` is signed off and pushed to the fork. The evidence branch is published; PR creation awaits the prefilled browser page in [OPEN-PR.md](OPEN-PR.md), because the API request returned Forbidden. [repair-review.md](repair-review.md) covers nine new regression cases and validation: 28 focused tests passed; TypeScript and build passed; the full web suite has one existing Base64 timeout reproduced on clean upstream. Earlier walkthrough validation reports remain unchanged and refer to their historical source snapshot.
 
 If your browser blocks local file URLs, serve this folder:
 
@@ -97,5 +97,5 @@ commands from `web/` with a supported Node 22 runtime. The full suite's existing
 Base64 timeout and its clean-upstream reproduction are documented, not hidden.
 
 The contributor has completed review and approved submission. The signed-off
-commit and push are complete. The remaining step is opening the PR with links
-to this documentation; the contributor will write their own follow-up issue comment.
+commit and push are complete. The remaining step is clicking Create pull request on the [prepared page](OPEN-PR.md).
+The contributor will write their own follow-up issue comment.

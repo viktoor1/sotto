@@ -1,0 +1,32 @@
+0 Comparing getsotto:main...viktoor1:fix/637-administrator-retry · getsotto/sotto · GitHub | Skip to content | Navigation Menu | Sign in
+83 Security Lab | Maintainer Community | GitHub Stars | Archive Program | REPOSITORIES
+127 ) | Pull requests | 28 | ( | 28
+140 Permalink | Comparing changes | Choose two branches to see what’s changed or to start a new pull request. If you need to, you can also | compare across forks | or
+141 Comparing changes | Choose two branches to see what’s changed or to start a new pull request. If you need to, you can also | compare across forks | or | learn more about diff comparisons
+142 Choose two branches to see what’s changed or to start a new pull request. If you need to, you can also | compare across forks | or | learn more about diff comparisons | .
+146 . | Open a pull request | Create a new pull request by comparing changes across two branches. If you need to, you can also | compare across forks | .
+147 Open a pull request | Create a new pull request by comparing changes across two branches. If you need to, you can also | compare across forks | . | Learn more about diff comparisons here
+148 Create a new pull request by comparing changes across two branches. If you need to, you can also | compare across forks | . | Learn more about diff comparisons here | .
+157 Uh oh! | There was an error while loading. | Please reload this page | . | base:
+161 base: | main | Choose a base ref | Branches | Tags
+163 Choose a base ref | Branches | Tags | Could not load branches | Nothing to show
+165 Tags | Could not load branches | Nothing to show | Loading | {{ refName }}
+177 head repository: | viktoor1/sotto | Failed to load repositories. Confirm that selected head ref is valid, then try again. | Loading | Uh oh!
+181 Uh oh! | There was an error while loading. | Please reload this page | . | compare:
+184 . | compare: | fix/637-administrator-retry | Choose a head ref | Branches
+187 Choose a head ref | Branches | Tags | Could not load branches | Nothing to show
+189 Tags | Could not load branches | Nothing to show | Loading | {{ refName }}
+200 Checking mergeability… | Don’t worry, you can still create the pull request. | Uh oh! | There was an error while loading. | Please reload this page
+202 Uh oh! | There was an error while loading. | Please reload this page | . | 1
+206 1 | commit | 2 | files changed | 1
+211 contributor | Commits on Oct 24, 2026 | fix(web): retry administrator loading for payer transfers | … | Allow retrying member discovery for the selected organisation without resetting it or invoking quote or transfer APIs. Keep discovery errors separate and prevent overlapping requests with an immediate lock. Cover pending retries, repeated failures, empty responses, selection resets and quote/submission error isolation with component tests. Signed-off-by: Ivanov Viktor <iviktoor10@gmail.com>
+214 … | Allow retrying member discovery for the selected organisation without resetting it or invoking quote or transfer APIs. Keep discovery errors separate and prevent overlapping requests with an immediate lock. Cover pending retries, repeated failures, empty responses, selection resets and quote/submission error isolation with component tests. Signed-off-by: Ivanov Viktor <iviktoor10@gmail.com> | viktoor1 | committed | Oct 24, 2026
+215 Allow retrying member discovery for the selected organisation without resetting it or invoking quote or transfer APIs. Keep discovery errors separate and prevent overlapping requests with an immediate lock. Cover pending retries, repeated failures, empty responses, selection resets and quote/submission error isolation with component tests. Signed-off-by: Ivanov Viktor <iviktoor10@gmail.com> | viktoor1 | committed | Oct 24, 2026 | Configuration menu
+216 viktoor1 | committed | Oct 24, 2026 | Configuration menu | View commit details
+219 Configuration menu | View commit details | Copy full SHA for e879c71 | Browse repository at this point | Copy the full SHA
+220 View commit details | Copy full SHA for e879c71 | Browse repository at this point | Copy the full SHA | e879c71
+223 Copy the full SHA | e879c71 | View commit details | Browse the repository at this point in the history | Loading
+224 e879c71 | View commit details | Browse the repository at this point in the history | Loading | This comparison is taking too long to generate.
+230 You can try running this command locally to see the comparison on your machine: | git diff main...fix/637-administrator-retry | Retry | Uh oh! | There was an error while loading.
+233 Uh oh! | There was an error while loading. | Please reload this page | . | Footer
+commit hash present True

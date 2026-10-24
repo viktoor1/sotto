@@ -511,3 +511,21 @@ states the exact activity-record cutoff. Creating a local archive did not upload
   files, whose exact whitespace is part of the evidence. Preserved those bytes
   and scoped the documentation check to authored entry pages and the publisher.
   The application contribution had already passed its own full diff check.
+- Published the evidence successfully as an independent, DCO-signed documentation
+  branch, initially commit `ed8541c16b51a58ef6332370065d33a243e06cc7`.
+  Verified the remote Git ref and retrieved the interactive HTML, discovery path,
+  journal, repair review and prepared PR body publicly over HTTPS with byte-for-byte
+  equality. The application branch still contains only its two reviewed files.
+- Attempted the authorised PR creation with `gh pr create`, explicitly targeting
+  `getsotto/sotto:main` from `viktoor1:fix/637-administrator-retry`, using `pr-body.md`.
+  It failed with `Post "https://api.github.com/graphql": Forbidden`. No PR URL was
+  returned and no PR is claimed created. This is an API access error, not an
+  automatic approval-review rejection. The Git pushes remain verified successful.
+- Prepared `create-pr-url.txt` and `OPEN-PR.md` for the browser route, with the title,
+  actual test limitation and all documentation links prefilled. The upstream
+  comparison page returned HTTP 200 and identified the expected base/head, code
+  commit `e879c71`, one commit and two files changed. Diff file contents are loaded
+  dynamically and were not present in the unauthenticated initial HTML response.
+- Remaining action: the contributor opens the prepared page in their signed-in
+  browser and clicks Create pull request. They will write their own follow-up
+  issue comment. Neither an issue comment nor a merge has been performed.

@@ -2,7 +2,9 @@
 
 The contributor approved this review and its documented test limitation on
 24 October 2026. The repair is committed as `e879c71` with DCO sign-off and pushed
-to the fork. PR creation is in progress. The only contribution changes are
+to the fork. The evidence is published separately; API access blocked PR creation,
+so the prepared browser form awaits the contributor's final click. See `OPEN-PR.md`.
+The only contribution changes are
 `web/src/PayerTransferStart.tsx` and
 `web/src/__tests__/PayerTransferJourneys.test.tsx`.
 
@@ -114,7 +116,9 @@ The contributor approved submission. The procedure is:
    merge it; it is not a deployment. Include the full-suite timeout limitation.
 4. Accompany the solution with the discovery summary and reviewed evidence bundle.
 
-The signed-off commit and code push are complete; PR creation is still pending.
+The signed-off commit, code push and evidence publication are complete. PR creation
+is still pending because the API request returned Forbidden; `OPEN-PR.md` provides
+the prefilled browser route.
 The PR description is prepared locally. The historical interactive walkthrough
 continues to show its original source snapshot and illustrative proposal; its old
 verification labels have not been retroactively rewritten.

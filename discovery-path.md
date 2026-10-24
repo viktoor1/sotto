@@ -1,8 +1,9 @@
 # Sotto #637: discovery and repair record
 
 Status: review approved on 24 October 2026; repair committed with DCO sign-off as
-`e879c71` and pushed to the contributor's fork. Evidence publication and PR creation
-are in progress. The sections below preserve the original failing checkpoint;
+`e879c71` and pushed to the contributor's fork. The evidence branch is published.
+PR creation awaits the prefilled browser form in `OPEN-PR.md` after an API access
+failure. The sections below preserve the original failing checkpoint;
 [repair-review.md](repair-review.md) explains the final change and checks.
 
 ## Problem and source evidence
