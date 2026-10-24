@@ -1,0 +1,40 @@
+diff --git a/web/src/__tests__/PayerTransferJourneys.test.tsx b/web/src/__tests__/PayerTransferJourneys.test.tsx
+index 9c57fe5..12792f0 100644
+--- a/web/src/__tests__/PayerTransferJourneys.test.tsx
++++ b/web/src/__tests__/PayerTransferJourneys.test.tsx
+@@ -157,6 +157,35 @@ describe("payer transfer journeys", () => {
+     expect(await screen.findByText(/The other payer must accept it/)).toBeInTheDocument();
+   });
+ 
++  it("retries administrator loading for the selected organisation without starting a transfer", async () => {
++    vi.mocked(api.fetchMembers).mockRejectedValueOnce(new Error("server error (503)"));
++    render(<PersonalTransferStart />);
++
++    const organisation = await screen.findByLabelText("Organisation");
++    fireEvent.change(organisation, { target: { value: "org-b" } });
++    expect(await screen.findByRole("alert")).toHaveTextContent("The transfer service is temporarily unavailable. Try again shortly.");
++    expect(organisation).toHaveValue("org-b");
++    expect(screen.getByLabelText("Other payer administrator")).toHaveValue("");
++    expect(screen.getByRole("button", { name: "Review payer transfer" })).toBeDisabled();
++    expect(api.fetchMembers).toHaveBeenCalledExactlyOnceWith("org-b");
++    expect(api.quotePayerTransfer).not.toHaveBeenCalled();
++    expect(api.beginPayerTransfer).not.toHaveBeenCalled();
++
++    fireEvent.click(screen.getByRole("button", { name: "Retry loading administrators" }));
++
++    expect(await screen.findByRole("option", { name: "admin-2 · owner" })).toBeInTheDocument();
++    expect(api.fetchMembers).toHaveBeenCalledTimes(2);
++    expect(api.fetchMembers).toHaveBeenLastCalledWith("org-b");
++    expect(organisation).toHaveValue("org-b");
++    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
++    expect(screen.queryByRole("button", { name: "Retry loading administrators" })).not.toBeInTheDocument();
++    expect(screen.getByRole("button", { name: "Review payer transfer" })).toBeDisabled();
++    fireEvent.change(screen.getByLabelText("Other payer administrator"), { target: { value: "admin-2" } });
++    expect(screen.getByRole("button", { name: "Review payer transfer" })).toBeEnabled();
++    expect(api.quotePayerTransfer).not.toHaveBeenCalled();
++    expect(api.beginPayerTransfer).not.toHaveBeenCalled();
++  });
++
+   it("does not claim a second payer must accept when the caller can authorise both sides", async () => {
+     vi.mocked(api.fetchOrgs).mockResolvedValue([org("org-b", "admin")]);
+     vi.mocked(api.fetchMembers).mockResolvedValue([member("user-1", "owner")]);

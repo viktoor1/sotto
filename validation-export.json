@@ -1,0 +1,92 @@
+{
+  "issue": "https://github.com/getsotto/sotto/issues/637",
+  "sourceCommit": "07f32e5cbdc758ddebfbc8a431302b93d2daa98a",
+  "sourceHashes": {
+    "web/src/PayerTransferStart.tsx": "ff426933fb9c4dc30e5c17f25a03e4e4346a112322f2b69f34388e23cb38725f",
+    "web/src/__tests__/PayerTransferJourneys.test.tsx": "25a4e9eb278d01eb32b1c5ebe7f56de52f71dd53888bbfc508f1804916f919b1",
+    "web/src/api.ts": "ff387b3ebba407bfcced94f1c9595a2baea544c5f9c62fc61d5092eb74785d1d"
+  },
+  "artifactBuiltAt": "2026-10-21T02:18:20+02:00",
+  "selected": {
+    "mode": "diff",
+    "route": "isolation",
+    "node": "pending"
+  },
+  "checkpoints": [
+    {
+      "id": "inspection",
+      "title": "Checkout and source inspection",
+      "when": "21 Oct 2026 · stage 1",
+      "status": "OBSERVED",
+      "detail": "Clean checkout on work at 07f32e5. Component matches the upstream snapshot inspected in stage 1.",
+      "command": "git status --short --branch\ngit rev-parse HEAD",
+      "output": "## work\n07f32e5cbdc758ddebfbc8a431302b93d2daa98a",
+      "anchor": "Stage 1"
+    },
+    {
+      "id": "baseline",
+      "title": "Existing payer-transfer baseline",
+      "when": "21 Oct 2026 · recorded baseline",
+      "status": "VERIFIED",
+      "detail": "12 existing component tests passed. This result does not cover the missing retry path.",
+      "command": "npm test -- --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx",
+      "output": "Test Files  1 passed (1)\nTests       12 passed (12)\nDuration    1.25s",
+      "anchor": "Stage 1"
+    },
+    {
+      "id": "types",
+      "title": "TypeScript baseline",
+      "when": "21 Oct 2026 · stage 1",
+      "status": "VERIFIED",
+      "detail": "The recorded npm run typecheck command completed successfully before any repair.",
+      "command": "npm run typecheck",
+      "output": "tsc -p tsconfig.json && tsc -p tsconfig.node.json\nExit status: 0 (recorded)",
+      "anchor": "Stage 1"
+    },
+    {
+      "id": "review",
+      "title": "Human review checkpoint",
+      "when": "21 Oct 2026 · stages 2 / 2a",
+      "status": "OBSERVED",
+      "detail": "The contributor read the proposal and requested visual diffs and a task journal. Production code and regression tests remain unchanged.",
+      "command": null,
+      "output": "Review-first workflow retained. No submission approval recorded.",
+      "anchor": "Stage 2 / Stage 2a"
+    },
+    {
+      "id": "proposal",
+      "title": "Focused recovery proposal",
+      "when": "21 Oct 2026 · stage 2",
+      "status": "PROPOSED",
+      "detail": "Separate discovery state, a guarded shared loader and a labelled retry control. The snippets are retained from visual-walkthrough.md.",
+      "command": null,
+      "output": "Not applied. Not regression-tested.",
+      "anchor": "Stage 2"
+    },
+    {
+      "id": "regression",
+      "title": "Reproduce before repairing",
+      "when": "Next contribution stage",
+      "status": "PROPOSED",
+      "detail": "Use the existing organisation/member fixtures and deferred promises. Observe the missing retry control failing against the original component first.",
+      "command": null,
+      "output": "Pending: no new regression test has been written or executed.",
+      "anchor": "Remaining stages"
+    }
+  ],
+  "acceptanceCases": {
+    "status": "PENDING",
+    "items": [
+      "Initial failure exposes an accessible error and labelled retry.",
+      "Pending retry keeps the organisation, clears the error and blocks overlap.",
+      "Repeated failure restores the retry control.",
+      "Successful retry restores eligible administrator choices.",
+      "Successful empty response is not presented as a failure.",
+      "Changing or clearing the organisation clears its recovery state.",
+      "Quote/submission failures do not expose administrator retry.",
+      "Retry calls neither the quote API nor the transfer API."
+    ]
+  },
+  "repairApplied": false,
+  "newRegressionTests": 0
+}

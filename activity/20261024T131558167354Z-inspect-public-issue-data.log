@@ -1,0 +1,8 @@
+JSON scripts 6
+0 ['locale', 'featureFlags', 'githubDomain', 'copilotApiOverrideUrl', 'cmcApiUrl']
+1 ['props']
+2 ['props']
+3 ['props']
+4 ['props']
+5 ['payload', 'title', 'appPayload', 'meta']
+payload keys ['issueViewerRoute', 'issuesLayoutRoute', 'repoLayoutRoute']

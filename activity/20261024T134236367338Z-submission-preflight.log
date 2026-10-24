@@ -1,0 +1,18 @@
+## fix/637-administrator-retry
+ M web/src/PayerTransferStart.tsx
+ M web/src/__tests__/PayerTransferJourneys.test.tsx
+
+HEAD de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757
+Git identity:
+user.name Ivanov Viktor
+user.email iviktoor10@gmail.com
+Remote origin github.com/viktoor1/sotto.git
+Reviewed source hashes match.
+gh version 2.46.0 (2025-01-13 Debian 2.46.0-3)
+https://github.com/cli/cli/releases/tag/v2.46.0
+GitHub CLI auth status exit 0
+github.com
+  X Failed to log in to github.com using token (GH_TOKEN)
+  - Active account: true
+  - The token in GH_TOKEN is invalid.
+

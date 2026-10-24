@@ -1,0 +1,178 @@
+
+> sotto-web@0.9.0 test
+> vitest run --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx
+
+
+ RUN  v5.0.0 /workspace/sotto/web
+
+ ❯ src/__tests__/PayerTransferJourneys.test.tsx (13 tests | 1 failed) 362ms
+   ❯ payer transfer journeys (13)
+     × retries administrator loading for the selected organisation without starting a transfer 28ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/PayerTransferJourneys.test.tsx > payer transfer journeys > retries administrator loading for the selected organisation without starting a transfer
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Retry loading administrators"
+
+Here are the accessible roles:
+
+  region:
+
+  Name "Change who pays":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"personal-transfer-heading"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Change who pays":
+  [36m<h2[39m
+    [33mid[39m=[32m"personal-transfer-heading"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"muted"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Organisation":
+  [36m<select />[39m
+
+  Name "Other payer administrator":
+  [36m<select[39m
+    [33mrequired[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Choose an organisation you belong to":
+  [36m<option[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  Name "org-a · member":
+  [36m<option[39m
+    [33mvalue[39m=[32m"org-a"[39m
+  [36m/>[39m
+
+  Name "org-b · member":
+  [36m<option[39m
+    [33mvalue[39m=[32m"org-b"[39m
+  [36m/>[39m
+
+  Name "Choose an organisation owner or admin":
+  [36m<option[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  alert:
+
+  Name "":
+  [36m<p[39m
+    [33mrole[39m=[32m"alert"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Review payer transfer":
+  [36m<button[39m
+    [33mdisabled[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-labelledby[39m=[32m"personal-transfer-heading"[39m
+    [36m>[39m
+      [36m<h2[39m
+        [33mid[39m=[32m"personal-transfer-heading"[39m
+      [36m>[39m
+        [0mChange who pays[0m
+      [36m</h2>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"muted"[39m
+      [36m>[39m
+        [0mMove billing to an organisation at your next renewal. The current payer remains responsible through the paid term, with no mid-term credit.[0m
+      [36m</p>[39m
+      [36m<label>[39m
+        [0mOrganisation[0m
+        [36m<select>[39m
+          [36m<option[39m
+            [33mvalue[39m=[32m""[39m
+          [36m>[39m
+            [0mChoose an organisation you belong to[0m
+          [36m</option>[39m
+          [36m<option[39m
+            [33mvalue[39m=[32m"org-a"[39m
+          [36m>[39m
+            [0morg-a[0m
+            [0m · [0m
+            [0mmember[0m
+          [36m</option>[39m
+          [36m<option[39m
+            [33mvalue[39m=[32m"org-b"[39m
+          [36m>[39m
+            [0morg-b[0m
+            [0m · [0m
+            [0mmember[0m
+          [36m</option>[39m
+        [36m</select>[39m
+      [36m</label>[39m
+      [36m<label>[39m
+        [0mOther payer administrator[0m
+        [36m<select[39m
+          [33mrequired[39m=[32m""[39m
+        [36m>[39m
+          [36m<option[39m
+            [33mvalue[39m=[32m""[39m
+          [36m>[39m
+            [0mChoose an organisation owner or admin[0m
+          [36m</option>[39m
+        [36m</select>[39m
+      [36m</label>[39m
+      [36m<p[39m
+        [33mrole[39m=[32m"alert"[39m
+      [36m>[39m
+        [0mThe transfer service is temporarily unavailable. Try again shortly.[0m
+      [36m</p>[39m
+      [36m<button[39m
+        [33mdisabled[39m=[32m""[39m
+      [36m>[39m
+        [0mReview payer transfer[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/__tests__/PayerTransferJourneys.test.tsx:174:28
+    172|     expect(api.beginPayerTransfer).not.toHaveBeenCalled();
+    173|
+    174|     fireEvent.click(screen.getByRole("button", { name: "Retry loading …
+       |                            ^
+    175|
+    176|     expect(await screen.findByRole("option", { name: "admin-2 · owner"…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 passed (13)
+   Start at  13:15:50
+   Duration  1.37s (environment 36%, tests 31%, import 17%, transform 15%, worker 1%)
+

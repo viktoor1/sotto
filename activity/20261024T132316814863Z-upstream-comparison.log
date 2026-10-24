@@ -1,0 +1,729 @@
+07f32e5cbdc758ddebfbc8a431302b93d2daa98a
+de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757
+ .github/scripts/greet-first-contribution.js        |  131 +-
+ .github/scripts/greet-first-contribution.test.js   |  136 +-
+ .github/workflows/ci.yml                           |   10 +-
+ .github/workflows/core-fuzz.yml                    |    2 +-
+ .github/workflows/coverage.yml                     |   12 +-
+ .github/workflows/greet.yml                        |   13 -
+ .github/workflows/images.yml                       |   51 +-
+ .github/workflows/kani.yml                         |    2 +-
+ .github/workflows/status-collector.yml             |    6 +
+ AGENT-WORKFLOWS.md                                 |    9 +-
+ Caddyfile                                          |   58 +-
+ Cargo.lock                                         |   28 +-
+ Dockerfile                                         |    1 +
+ README.de.md                                       |   62 +-
+ README.es.md                                       |   62 +-
+ README.fr.md                                       |   62 +-
+ README.md                                          |   63 +-
+ README.pt-BR.md                                    |   62 +-
+ crates/cli/src/agent_approvals.rs                  |  101 +-
+ crates/cli/src/main.rs                             |   44 +-
+ crates/cli/tests/e2e.rs                            |   23 +
+ crates/cli/tests/share_cli.rs                      |    1 +
+ crates/cli/tests/task_config_cli.rs                |  202 ++
+ crates/server/Cargo.toml                           |    1 +
+ crates/server/build.rs                             |   19 +
+ .../0065_founding_price_change_notices.sql         |   30 +
+ .../0066_cloud_retention_operator_actions.sql      |   40 +
+ .../migrations/0067_cloud_coverage_authority.sql   |  156 +
+ .../migrations/0068_cloud_contact_verification.sql |   84 +
+ .../migrations/0069_cloud_notice_delivery.sql      |   51 +
+ .../migrations/0070_billing_operation_recovery.sql |   53 +
+ .../0071_sponsored_operation_recovery.sql          |   56 +
+ .../migrations/0072_billing_refund_recovery.sql    |   21 +
+ .../0073_shared_organisation_retention.sql         |  175 ++
+ .../0074_guarded_retention_execution.sql           |   56 +
+ .../0075_cloud_operations_diagnostics.sql          |   49 +
+ crates/server/src/billing.rs                       | 3190 +++++++++++++++++--
+ crates/server/src/billing_operations.rs            |  420 ++-
+ crates/server/src/billing_recovery_executor.rs     |   30 +
+ crates/server/src/billing_refunds.rs               |  241 +-
+ crates/server/src/billing_transfer_api.rs          |    2 +
+ crates/server/src/billing_transfer_worker.rs       |   52 +-
+ crates/server/src/billing_transfers.rs             |   15 +
+ crates/server/src/cloud_action_policy.rs           |   11 +-
+ crates/server/src/cloud_coverage_authority.rs      |  223 ++
+ crates/server/src/cloud_coverage_reconciliation.rs |   72 +
+ crates/server/src/cloud_coverage_revalidation.rs   |   82 +
+ crates/server/src/cloud_coverage_store.rs          |   21 +-
+ crates/server/src/cloud_operations.rs              | 1247 ++++++++
+ crates/server/src/cloud_provider.rs                |   86 +-
+ .../src/cloud_provider_stripe_refresh_executor.rs  |  356 ++-
+ .../src/cloud_provider_stripe_sponsored_store.rs   |   23 +
+ crates/server/src/cloud_retention_lifecycle.rs     |  704 +++++
+ crates/server/src/cloud_shared_retention.rs        |  767 +++++
+ crates/server/src/config.rs                        | 1028 +++++-
+ crates/server/src/contact_email.rs                 |  544 ++++
+ crates/server/src/contact_verification.rs          |  789 +++++
+ crates/server/src/founding_price_notices.rs        |  650 ++++
+ crates/server/src/founding_schedule.rs             |   40 +-
+ crates/server/src/founding_schedule_worker.rs      |   26 +-
+ crates/server/src/lib.rs                           |   43 +
+ crates/server/src/main.rs                          |  162 +
+ crates/server/src/notifications.rs                 | 1728 ++++++++++-
+ crates/server/src/person_eligibility.rs            |   52 +-
+ crates/server/src/personal_billing.rs              |   19 +-
+ crates/server/src/retention.rs                     | 3279 +++++++++++++++++---
+ crates/server/src/retention_ops.rs                 |  729 +++++
+ crates/server/src/sponsored_billing.rs             |  440 ++-
+ .../src/sponsored_billing_recovery_executor.rs     |   27 +
+ crates/server/src/state.rs                         |   38 +
+ crates/server/tests/account.rs                     |   23 +
+ crates/server/tests/audit.rs                       |   23 +
+ crates/server/tests/auth.rs                        |   23 +
+ crates/server/tests/authorisation_transactions.rs  |   23 +
+ crates/server/tests/billing.rs                     |  254 ++
+ crates/server/tests/billing_operations.rs          |  901 +++++-
+ crates/server/tests/billing_refunds.rs             |  230 +-
+ crates/server/tests/billing_transfer_api.rs        |   73 +-
+ crates/server/tests/billing_transfer_ops.rs        |   46 +
+ crates/server/tests/cloud_action_policy.rs         |   70 +
+ crates/server/tests/cloud_coverage_migrations.rs   |  165 +
+ crates/server/tests/cloud_operations.rs            |  249 ++
+ crates/server/tests/cloud_provider.rs              |   28 +-
+ crates/server/tests/cloud_provider_refresh.rs      |  192 +-
+ .../tests/cloud_provider_sponsored_invoice.rs      |   23 +
+ crates/server/tests/cloud_retention_lifecycle.rs   | 3058 ++++++++++++++++++
+ crates/server/tests/contact_verification.rs        | 1011 ++++++
+ crates/server/tests/entitlements.rs                |   23 +
+ crates/server/tests/export.rs                      |   23 +
+ crates/server/tests/founding_price_notices.rs      |  596 ++++
+ crates/server/tests/founding_schedule.rs           |   44 +-
+ crates/server/tests/grants.rs                      |   23 +
+ crates/server/tests/health.rs                      |   23 +
+ crates/server/tests/machine.rs                     |   23 +
+ crates/server/tests/machine_token_migrations.rs    |   23 +
+ crates/server/tests/metrics.rs                     |   23 +
+ crates/server/tests/notifications.rs               | 1456 ++++++++-
+ crates/server/tests/org.rs                         |   23 +
+ crates/server/tests/org_access.rs                  |   23 +
+ crates/server/tests/org_deletion_api.rs            |   23 +
+ crates/server/tests/org_deletion_ops.rs            |   23 +
+ crates/server/tests/personal_billing.rs            |   19 +-
+ crates/server/tests/recovery.rs                    |   23 +
+ crates/server/tests/retention.rs                   |  185 +-
+ crates/server/tests/rotate.rs                      |   23 +
+ crates/server/tests/server_info.rs                 |   23 +
+ crates/server/tests/share.rs                       |   23 +
+ crates/server/tests/sponsored_billing.rs           | 1350 +++++++-
+ crates/server/tests/sponsored_founding.rs          |   37 +
+ crates/server/tests/stripe_lifecycle_acceptance.md |   73 +-
+ .../server/tests/stripe_resource_field_matrix.md   |    4 +
+ crates/server/tests/support/migrations.rs          |   20 +-
+ crates/server/tests/sync.rs                        |   23 +
+ crates/server/tests/telemetry.rs                   |   23 +
+ deploy/.env.example                                |   45 +
+ deploy/README.md                                   |  328 +-
+ deploy/cloud-operations.md                         |   51 +
+ deploy/docker-compose.prod.yml                     |   27 +
+ scripts/check-assurance                            |   71 +-
+ scripts/check-cloud-lifecycle-integration          |  245 ++
+ scripts/export-retention-journal                   |    2 +-
+ scripts/founding-price-notice-inventory.sql        |   30 +
+ scripts/replay-retention-journal                   |   72 +-
+ scripts/retention-restore-rehearsal                |  355 +++
+ scripts/status-probe                               |  114 +-
+ scripts/tests/test_assurance.py                    |   87 +
+ scripts/tests/test_cloud_lifecycle_integration.py  |  172 +
+ scripts/tests/test_retention_journal.py            |   95 +-
+ scripts/tests/test_retention_restore_rehearsal.py  |  112 +
+ scripts/tests/test_status_probe.py                 |   99 +-
+ .../test_validate_stripe_lifecycle_evidence.py     |  280 +-
+ scripts/validate-stripe-lifecycle-evidence         |  283 +-
+ web/package-lock.json                              |  122 +-
+ web/package.json                                   |    4 +-
+ web/src/AuthCallback.tsx                           |   15 +-
+ web/src/CloudAccountPanel.tsx                      |    6 +-
+ web/src/CloudContactSettings.tsx                   |  159 +
+ web/src/Landing.tsx                                |   35 +-
+ web/src/PayerTransferInbox.tsx                     |   22 +-
+ web/src/PayerTransferStart.tsx                     |  109 +-
+ web/src/__tests__/AuthCallback.test.tsx            |   62 +-
+ .../__tests__/CloudAccountPanel.refresh.test.tsx   |    6 +
+ web/src/__tests__/CloudAccountPanel.test.tsx       |   41 +
+ .../CloudAccountPanelCancellation.test.tsx         |  126 +
+ web/src/__tests__/CloudAccountPanelRefund.test.tsx |  146 +
+ web/src/__tests__/CloudContactApi.test.ts          |   27 +
+ web/src/__tests__/CloudContactSettings.test.tsx    |  325 ++
+ web/src/__tests__/CloudExportRecovery.test.tsx     |    6 +
+ web/src/__tests__/CloudOperationRecovery.test.tsx  |   10 +
+ web/src/__tests__/LandingPricing.test.tsx          |    7 +-
+ web/src/__tests__/PayerTransferJourneys.test.tsx   |  133 +-
+ web/src/__tests__/login.test.ts                    |   38 +
+ web/src/api.ts                                     |   92 +-
+ web/src/login.ts                                   |   14 +-
+ web/vite.config.ts                                 |    2 +-
+ 155 files changed, 32097 insertions(+), 1513 deletions(-)
+diff --git a/web/package-lock.json b/web/package-lock.json
+index 22834fd..fd2ca75 100644
+--- a/web/package-lock.json
++++ b/web/package-lock.json
+@@ -22,8 +22,8 @@
+         "@vitejs/plugin-react": "^4.3.4",
+         "happy-dom": "^20.14.5",
+         "typescript": "^5.7.2",
+-        "vite": "^6.0.7",
+-        "vitest": "^5.0.0"
++        "vite": "^6.4.5",
++        "vitest": "^5.0.5"
+       }
+     },
+     "node_modules/@adobe/css-tools": {
+@@ -1422,22 +1422,22 @@
+       }
+     },
+     "node_modules/@vitest/mocker": {
+-      "version": "5.0.0",
+-      "resolved": "https://registry.npmjs.org/@vitest/mocker/-/mocker-5.0.0.tgz",
+-      "integrity": "sha512-66PGTMIiVJP3t4a5yxU9qPtf7MdTBs8jmToMvy+HVflB3Yy13WJZTtPePdvU+wjRV02SKK5doLbSA6o9pwOmiA==",
++      "version": "5.0.5",
++      "resolved": "https://registry.npmjs.org/@vitest/mocker/-/mocker-5.0.5.tgz",
++      "integrity": "sha512-xLL3lkDegJZw+MGoGaCCsFayDZthGgpAtr3Vziyfc4p7xH89K7KRPcRBBh/kEYm0Aqkt5DtTmkYpBtRV/FrHZg==",
+       "dev": true,
+       "license": "MIT",
+       "dependencies": {
+         "@jridgewell/trace-mapping": "0.3.31",
+-        "@vitest/spy": "5.0.0",
++        "@vitest/spy": "5.0.5",
+         "estree-walker": "^3.0.3",
+-        "magic-string": "^1.2.3"
++        "magic-string": "^1.4.3"
+       },
+       "funding": {
+         "url": "https://opencollective.com/vitest"
+       },
+       "peerDependencies": {
+-        "msw": "^2.4.9",
++        "msw": "^2.4.9 || ^3.0.0",
+         "vite": "^6.0.0 || ^7.0.0 || ^8.0.0"
+       },
+       "peerDependenciesMeta": {
+@@ -1450,9 +1450,9 @@
+       }
+     },
+     "node_modules/@vitest/spy": {
+-      "version": "5.0.0",
+-      "resolved": "https://registry.npmjs.org/@vitest/spy/-/spy-5.0.0.tgz",
+-      "integrity": "sha512-uy+luWBAPw9XfthoHi5AkfHUnuPYEESjl0p/r+meoBnU8bxg5GDQ3Ey8MjcJ6sqahkL4PFyrvfMJJBw7LbU06g==",
++      "version": "5.0.5",
++      "resolved": "https://registry.npmjs.org/@vitest/spy/-/spy-5.0.5.tgz",
++      "integrity": "sha512-lwJRExuH417257Q5wv9QYugN9IMJkoxcrKrYxGPQkBzl7wlNpTUxD/5yNX4ESKVUIShKPgkGchYPFMWOOk0wzw==",
+       "dev": true,
+       "license": "MIT",
+       "funding": {
+@@ -1586,9 +1586,9 @@
+       "license": "CC-BY-4.0"
+     },
+     "node_modules/chai": {
+-      "version": "6.2.2",
+-      "resolved": "https://registry.npmjs.org/chai/-/chai-6.2.2.tgz",
+-      "integrity": "sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==",
++      "version": "6.3.0",
++      "resolved": "https://registry.npmjs.org/chai/-/chai-6.3.0.tgz",
++      "integrity": "sha512-XWAtwJ6OHO+tj0EKCs0Y2UamnyOxseZWltU4x2U2wh8g4AigdjwvtUjvLP2tqkA/avxHEtzxNaqGq/YGNwckKg==",
+       "dev": true,
+       "license": "MIT",
+       "engines": {
+@@ -1878,9 +1878,9 @@
+       }
+     },
+     "node_modules/magic-string": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/magic-string/-/magic-string-1.3.1.tgz",
+-      "integrity": "sha512-rm91zr2Ou+XueDTohjQQjdQEcYM6zVi8KVUCG8Ec3vHwUEKrhSdCNyfuIywkA6hcCAteIn0ZOtAHA6eGpiX+Pg==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/magic-string/-/magic-string-1.4.3.tgz",
++      "integrity": "sha512-z12OxmaPGE0F4xlpGdjuAUckipLpQlTAuAmyGhNoD7ODpYUzvDfvtxUbjM/jwznyP178oju/KDdyi220wNJ0RQ==",
+       "dev": true,
+       "license": "MIT",
+       "dependencies": {
+@@ -1934,9 +1934,9 @@
+       }
+     },
+     "node_modules/obug": {
+-      "version": "2.2.1",
+-      "resolved": "https://registry.npmjs.org/obug/-/obug-2.2.1.tgz",
+-      "integrity": "sha512-XrsrhT5sybtKI6wakr2SPOlGZWWYbUXZ7a0jT8/QOeAPau+1X/bSegNe5YR75oJmEZQbKningirmGOEJCIk61Q==",
++      "version": "3.0.0",
++      "resolved": "https://registry.npmjs.org/obug/-/obug-3.0.0.tgz",
++      "integrity": "sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==",
+       "dev": true,
+       "funding": [
+         "https://github.com/sponsors/sxzz",
+@@ -2173,13 +2173,6 @@
+         "semver": "bin/semver.js"
+       }
+     },
+-    "node_modules/siginfo": {
+-      "version": "2.0.0",
+-      "resolved": "https://registry.npmjs.org/siginfo/-/siginfo-2.0.0.tgz",
+-      "integrity": "sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==",
+-      "dev": true,
+-      "license": "ISC"
+-    },
+     "node_modules/source-map-js": {
+       "version": "1.2.2",
+       "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz",
+@@ -2190,17 +2183,10 @@
+         "node": ">=0.10.0"
+       }
+     },
+-    "node_modules/stackback": {
+-      "version": "0.0.2",
+-      "resolved": "https://registry.npmjs.org/stackback/-/stackback-0.0.2.tgz",
+-      "integrity": "sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+     "node_modules/std-env": {
+-      "version": "4.2.0",
+-      "resolved": "https://registry.npmjs.org/std-env/-/std-env-4.2.0.tgz",
+-      "integrity": "sha512-oCUKSupKTHX53EyjDtuZQ64pjLJ6yYCtpmEw0goYxtjG9KpbRe8KAsl2tBUGU9DyMcJ0RwJ8GqJAFzMXcXW1Rw==",
++      "version": "4.3.0",
++      "resolved": "https://registry.npmjs.org/std-env/-/std-env-4.3.0.tgz",
++      "integrity": "sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==",
+       "dev": true,
+       "license": "MIT"
+     },
+@@ -2218,9 +2204,9 @@
+       }
+     },
+     "node_modules/tinybench": {
+-      "version": "6.1.4",
+-      "resolved": "https://registry.npmjs.org/tinybench/-/tinybench-6.1.4.tgz",
+-      "integrity": "sha512-9APumHG7r4yOk4X4WlkmE71aZcv1gvin1czO3OQ1U9iJcFA5Ja/ygyb0vPOVHTthFozUYs8CLoLUlM8grb2lTQ==",
++      "version": "6.2.2",
++      "resolved": "https://registry.npmjs.org/tinybench/-/tinybench-6.2.2.tgz",
++      "integrity": "sha512-nIZ2N2dFpjBsg2hgitKu7mA+FvsIJuGJOwysRngmVRRmWgR/UyPjwJj8c/fT/dhm8EkHnF5EOogRf+0Z2qrimA==",
+       "dev": true,
+       "license": "MIT",
+       "engines": {
+@@ -2228,9 +2214,9 @@
+       }
+     },
+     "node_modules/tinyexec": {
+-      "version": "1.3.0",
+-      "resolved": "https://registry.npmjs.org/tinyexec/-/tinyexec-1.3.0.tgz",
+-      "integrity": "sha512-QKAl9m8gWWGHV8jZcPeym6j+XULi6tOf1mT83WYJ4Lk2ytW/uwAWkrP0uFsdoYMdueVJ0qs26wZ+23xeB4ibNQ==",
++      "version": "1.3.1",
++      "resolved": "https://registry.npmjs.org/tinyexec/-/tinyexec-1.3.1.tgz",
++      "integrity": "sha512-GCvB3aoys96IuDFBMcTB46JOR6mdMtAToqwiW8JlWhsoh1mhHi/xn9ss/Dg7N555GiJyEt2qzoG/NHCwM6h1EA==",
+       "dev": true,
+       "license": "MIT",
+       "engines": {
+@@ -2307,9 +2293,9 @@
+       }
+     },
+     "node_modules/vite": {
+-      "version": "6.4.3",
+-      "resolved": "https://registry.npmjs.org/vite/-/vite-6.4.3.tgz",
+-      "integrity": "sha512-NTKlcQjlAK7MlQoyb6LgaqHc8sso/pVyUJYWMws3jg21uTJw/LddqIFPcPqP6PzpgbIcZyKI85sFE4HBrQDA8A==",
++      "version": "6.4.5",
++      "resolved": "https://registry.npmjs.org/vite/-/vite-6.4.5.tgz",
++      "integrity": "sha512-4enwjFfi4IwtEh0w+jPzpLVOFQiPHmmzPxcHXQOyEur47o6u0jE573DmGpjA+7irXoMLYRZD5ZaFUEneS3abPg==",
+       "dev": true,
+       "license": "MIT",
+       "dependencies": {
+@@ -2382,25 +2368,25 @@
+       }
+     },
+     "node_modules/vitest": {
+-      "version": "5.0.0",
+-      "resolved": "https://registry.npmjs.org/vitest/-/vitest-5.0.0.tgz",
+-      "integrity": "sha512-gpsMNoRhMjMktVxPtstOH4/PJuPyovVaMDr4oDilXaGH1EcqM2OE96SoHT2VIQ6fTGtTjqmHDrEu2X9RQiXf8Q==",
++      "version": "5.0.5",
++      "resolved": "https://registry.npmjs.org/vitest/-/vitest-5.0.5.tgz",
++      "integrity": "sha512-cPODOMF8YnkiiYtDdHo6n4wWmBrOBBbOIYH2d33M4l3CdNn72h+qMmO6uXffUN6A5AZFXNND/d+krS9mgkXRfg==",
+       "dev": true,
+       "license": "MIT",
+       "dependencies": {
+         "@types/chai": "^5.2.2",
+-        "@vitest/mocker": "5.0.0",
+-        "chai": "^6.2.2",
++        "@vitest/mocker": "5.0.5",
++        "chai": "^6.3.0",
+         "es-module-lexer": "^2.3.2",
+         "expect-type": "^1.4.0",
+-        "magic-string": "^1.2.3",
+-        "obug": "^2.1.4",
++        "magic-string": "^1.4.3",
++        "obug": "^3.0.0",
+         "picomatch": "^4.0.7",
+-        "std-env": "^4.2.0",
+-        "tinybench": "6.1.4",
+-        "tinyexec": "1.3.0",
++        "std-env": "^4.3.0",
++        "tinybench": "^6.2.2",
++        "tinyexec": "^1.3.1",
+         "tinyglobby": "^0.2.17",
+-        "why-is-node-running": "^2.3.0"
++        "why-is-node-running": "3.2.1"
+       },
+       "bin": {
+         "vitest": "vitest.mjs"
+@@ -2415,12 +2401,12 @@
+         "@edge-runtime/vm": "*",
+         "@opentelemetry/api": "^1.9.0",
+         "@types/node": "^22.0.0 || >=24.0.0",
+-        "@vitest/browser-playwright": "5.0.0",
+-        "@vitest/browser-preview": "5.0.0",
++        "@vitest/browser-playwright": "5.0.5",
++        "@vitest/browser-preview": "5.0.5",
+         "@vitest/browser-webdriverio": "^5.0.0-beta.5 || >=5.0.0",
+-        "@vitest/coverage-istanbul": "5.0.0",
+-        "@vitest/coverage-v8": "5.0.0",
+-        "@vitest/ui": "5.0.0",
++        "@vitest/coverage-istanbul": "5.0.5",
++        "@vitest/coverage-v8": "5.0.5",
++        "@vitest/ui": "5.0.5",
+         "happy-dom": "*",
+         "jsdom": "*",
+         "vite": "^6.4.0 || ^7.0.0 || ^8.0.0"
+@@ -2475,20 +2461,16 @@
+       }
+     },
+     "node_modules/why-is-node-running": {
+-      "version": "2.3.0",
+-      "resolved": "https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-2.3.0.tgz",
+-      "integrity": "sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w==",
++      "version": "3.2.1",
++      "resolved": "https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-3.2.1.tgz",
++      "integrity": "sha512-Tb2FUhB4vUsGQlfSquQLYkApkuPAFQXGFzxWKHHumVz2dK+X1RUm/HnID4+TfIGYJ1kTcwOaCk/buYCEJr6YjQ==",
+       "dev": true,
+       "license": "MIT",
+-      "dependencies": {
+-        "siginfo": "^2.0.0",
+-        "stackback": "0.0.2"
+-      },
+       "bin": {
+         "why-is-node-running": "cli.js"
+       },
+       "engines": {
+-        "node": ">=8"
++        "node": ">=20.11"
+       }
+     },
+     "node_modules/ws": {
+diff --git a/web/package.json b/web/package.json
+index c557e04..ca5fb3d 100644
+--- a/web/package.json
++++ b/web/package.json
+@@ -29,7 +29,7 @@
+     "@vitejs/plugin-react": "^4.3.4",
+     "happy-dom": "^20.14.5",
+     "typescript": "^5.7.2",
+-    "vite": "^6.0.7",
+-    "vitest": "^5.0.0"
++    "vite": "^6.4.5",
++    "vitest": "^5.0.5"
+   }
+ }
+diff --git a/web/src/PayerTransferStart.tsx b/web/src/PayerTransferStart.tsx
+index ae66833..a790276 100644
+--- a/web/src/PayerTransferStart.tsx
++++ b/web/src/PayerTransferStart.tsx
+@@ -70,6 +70,14 @@ function CounterpartySelect({
+   </label>;
+ }
+ 
++function loadMessage(error: unknown): string {
++  if (!(error instanceof Error)) return "Your organisations could not be loaded. Try again shortly.";
++  const status = /server error \((\d+)\)/.exec(error.message)?.[1];
++  if (status === "403") return "You do not have authority to list organisations for this account.";
++  if (status === "404") return "Organisation lookup is not available on this server.";
++  return "Your organisations could not be loaded. Try again shortly.";
++}
++
+ export function PersonalTransferStart() {
+   const [available, setAvailable] = useState(false);
+   const [userId, setUserId] = useState("");
+@@ -81,21 +89,58 @@ export function PersonalTransferStart() {
+   const [busy, setBusy] = useState(false);
+   const [error, setError] = useState<string | null>(null);
+   const [notice, setNotice] = useState<string | null>(null);
++  const [loading, setLoading] = useState(true);
++  const [loadError, setLoadError] = useState<string | null>(null);
+   const idempotencyKey = useRef<string | null>(null);
++  const loadInFlight = useRef(false);
++  const mounted = useRef(true);
+ 
+-  useEffect(() => {
+-    let current = true;
+-    void Promise.all([fetchPayerTransferCapabilities(), me(), fetchOrgs()])
+-      .then(([capabilities, account, organisations]) => {
+-        if (!current) return;
+-        setAvailable(capabilities.available);
+-        setUserId(account?.userId ?? "");
+-        // A personal beneficiary can ask their existing organisation to take over billing even
+-        // when they are an ordinary member; the organisation administrator is the counterparty.
++  async function loadInitial() {
++    if (loadInFlight.current) return;
++    loadInFlight.current = true;
++    setLoading(true);
++    try {
++      const [capabilities, account] = await Promise.all([fetchPayerTransferCapabilities(), me()]);
++      if (!mounted.current) return;
++      const nextAvailable = capabilities.available;
++      const nextUserId = account?.userId ?? "";
++      setAvailable(nextAvailable);
++      setUserId(nextUserId);
++      if (!nextAvailable || nextUserId === "") {
++        setOrgs([]);
++        setLoadError(null);
++        return;
++      }
++      // A personal beneficiary can ask their existing organisation to take over billing even
++      // when they are an ordinary member; the organisation administrator is the counterparty.
++      try {
++        const organisations = await fetchOrgs();
++        if (!mounted.current) return;
+         setOrgs(organisations);
+-      })
+-      .catch(() => { if (current) setAvailable(false); });
+-    return () => { current = false; };
++        setLoadError(null);
++      } catch (e) {
++        if (!mounted.current) return;
++        setOrgs([]);
++        setLoadError(loadMessage(e));
++      }
++    } catch {
++      // Capability or account discovery failed: keep the section hidden like unsupported servers.
++      if (mounted.current) {
++        setAvailable(false);
++        setUserId("");
++        setOrgs([]);
++        setLoadError(null);
++      }
++    } finally {
++      if (mounted.current) setLoading(false);
++      loadInFlight.current = false;
++    }
++  }
++
++  useEffect(() => {
++    mounted.current = true;
++    void loadInitial();
++    return () => { mounted.current = false; };
+   }, []);
+ 
+   async function chooseOrganisation(orgId: string) {
+@@ -155,23 +200,29 @@ export function PersonalTransferStart() {
+   return <section aria-labelledby="personal-transfer-heading">
+     <h2 id="personal-transfer-heading">Change who pays</h2>
+     <p className="muted">Move billing to an organisation at your next renewal. The current payer remains responsible through the paid term, with no mid-term credit.</p>
+-    <label>Organisation
+-      <select value={destinationOrgId} onChange={(event) => void chooseOrganisation(event.target.value)} disabled={busy}>
+-        <option value="">Choose an organisation you belong to</option>
+-        {orgs.map((org) => <option key={org.id} value={org.id}>{org.id} · {org.role}</option>)}
+-      </select>
+-    </label>
+-    {destinationOrgId !== "" && <CounterpartySelect members={members} value={counterpartyId} onChange={(value) => { setCounterpartyId(value); setQuote(null); }} exclude={userId} disabled={busy} />}
+-    {error !== null && <p role="alert">{error}</p>}
+-    {notice !== null && <p className="notice" role="status">{notice}</p>}
+-    {quote === null
+-      ? <button disabled={busy || destinationOrgId === "" || counterpartyId === ""} onClick={() => void requestQuote()}>{busy ? "Loading transfer quote…" : "Review payer transfer"}</button>
+-      : <div className="notice" role="status">
+-        <p>At renewal on {date(quote.effectiveFrom)}, {quote.destinationKind === "sponsor" ? "the organisation" : "you"} would pay {money(quote.amountPence)} per {quote.interval}. No mid-term credit is due.</p>
+-        {quote.founding && <p className="muted">The server has included the founding price applicable at this renewal.</p>}
+-        <button disabled={busy} onClick={() => void createInvitation()}>{busy ? "Sending request…" : "Send request for acceptance"}</button>{" "}
+-        <button disabled={busy} onClick={() => { setQuote(null); idempotencyKey.current = null; }}>Cancel</button>
+-      </div>}
++    {loadError !== null ? <>
++      <p role="alert">{loadError}</p>
++      <button type="button" disabled={loading} aria-busy={loading ? "true" : undefined} onClick={() => void loadInitial()}>{loading ? "Retrying…" : "Retry"}</button>
++      {loading && <p className="muted" role="status">Loading organisations…</p>}
++    </> : loading ? <p className="muted" role="status">Loading organisations…</p> : <>
++      <label>Organisation
++        <select value={destinationOrgId} onChange={(event) => void chooseOrganisation(event.target.value)} disabled={busy}>
++          <option value="">Choose an organisation you belong to</option>
++          {orgs.map((org) => <option key={org.id} value={org.id}>{org.id} · {org.role}</option>)}
++        </select>
++      </label>
++      {destinationOrgId !== "" && <CounterpartySelect members={members} value={counterpartyId} onChange={(value) => { setCounterpartyId(value); setQuote(null); }} exclude={userId} disabled={busy} />}
++      {error !== null && <p role="alert">{error}</p>}
++      {notice !== null && <p className="notice" role="status">{notice}</p>}
++      {quote === null
++        ? <button disabled={busy || destinationOrgId === "" || counterpartyId === ""} onClick={() => void requestQuote()}>{busy ? "Loading transfer quote…" : "Review payer transfer"}</button>
++        : <div className="notice" role="status">
++          <p>At renewal on {date(quote.effectiveFrom)}, {quote.destinationKind === "sponsor" ? "the organisation" : "you"} would pay {money(quote.amountPence)} per {quote.interval}. No mid-term credit is due.</p>
++          {quote.founding && <p className="muted">The server has included the founding price applicable at this renewal.</p>}
++          <button disabled={busy} onClick={() => void createInvitation()}>{busy ? "Sending request…" : "Send request for acceptance"}</button>{" "}
++          <button disabled={busy} onClick={() => { setQuote(null); idempotencyKey.current = null; }}>Cancel</button>
++        </div>}
++    </>}
+   </section>;
+ }
+ 
+diff --git a/web/src/__tests__/PayerTransferJourneys.test.tsx b/web/src/__tests__/PayerTransferJourneys.test.tsx
+index 9c57fe5..c33f9ee 100644
+--- a/web/src/__tests__/PayerTransferJourneys.test.tsx
++++ b/web/src/__tests__/PayerTransferJourneys.test.tsx
+@@ -1,5 +1,5 @@
+ import "@testing-library/jest-dom/vitest";
+-import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
++import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
+ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+ 
+ import * as api from "../api";
+@@ -70,6 +70,16 @@ function member(userId: string, role: string): api.Member {
+   return { userId, role, publicKey: null };
+ }
+ 
++function deferred<T>() {
++  let resolve!: (value: T) => void;
++  let reject!: (reason?: unknown) => void;
++  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
++    resolve = resolvePromise;
++    reject = rejectPromise;
++  });
++  return { promise, resolve, reject };
++}
++
+ beforeEach(() => {
+   vi.resetAllMocks();
+   vi.mocked(api.fetchPayerTransferCapabilities).mockResolvedValue({ available: true, setupAvailable: true });
+@@ -117,6 +127,44 @@ describe("payer transfer journeys", () => {
+     expect(screen.queryByRole("button", { name: "Load older transfers" })).not.toBeInTheDocument();
+   });
+ 
++  it("does not claim an empty inbox when the first list request fails", async () => {
++    vi.mocked(api.fetchPayerTransfers)
++      .mockRejectedValueOnce(new Error("server error (503)"))
++      .mockRejectedValueOnce(new Error("server error (503)"))
++      .mockResolvedValueOnce({ transfers: [], nextCursor: null })
++      .mockResolvedValueOnce({ transfers: [transfer()], nextCursor: null });
++    render(<PayerTransferInbox />);
++    expect(await screen.findByRole("alert")).toHaveTextContent("The transfer service is temporarily unavailable");
++    const refreshButton = screen.getByRole("button", { name: "Refresh transfers" });
++    expect(refreshButton).toBeEnabled();
++    expect(screen.queryByText("There are no payer transfer requests for this account.")).not.toBeInTheDocument();
++
++    fireEvent.click(refreshButton);
++    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
++    expect(await screen.findByRole("alert")).toBeInTheDocument();
++    expect(screen.queryByText("There are no payer transfer requests for this account.")).not.toBeInTheDocument();
++
++    fireEvent.click(screen.getByRole("button", { name: "Refresh transfers" }));
++    expect(await screen.findByText("There are no payer transfer requests for this account.")).toBeInTheDocument();
++    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
++
++    fireEvent.click(screen.getByRole("button", { name: "Refresh transfers" }));
++    expect(await screen.findByText("Incoming request")).toBeInTheDocument();
++    expect(screen.queryByText("There are no payer transfer requests for this account.")).not.toBeInTheDocument();
++  });
++
++  it("keeps loaded requests visible when a later refresh fails", async () => {
++    vi.mocked(api.fetchPayerTransfers)
++      .mockResolvedValueOnce({ transfers: [transfer()], nextCursor: null })
++      .mockRejectedValueOnce(new Error("server error (503)"));
++    render(<PayerTransferInbox />);
++    expect(await screen.findByText("Incoming request")).toBeInTheDocument();
++    fireEvent.click(screen.getByRole("button", { name: "Refresh transfers" }));
++    expect(await screen.findByRole("alert")).toHaveTextContent("The transfer service is temporarily unavailable");
++    expect(screen.getByText("Incoming request")).toBeInTheDocument();
++    expect(screen.queryByText("There are no payer transfer requests for this account.")).not.toBeInTheDocument();
++  });
++
+   it("shows invitations as expired once their renewal boundary has passed", async () => {
+     vi.mocked(api.fetchPayerTransfers).mockResolvedValue({
+       transfers: [transfer({ effectiveFrom: 1 })],
+@@ -128,6 +176,30 @@ describe("payer transfer journeys", () => {
+     expect(screen.queryByRole("button", { name: "Decline request" })).not.toBeInTheDocument();
+   });
+ 
++  it("expires an open invitation at its deadline without a refresh or click", async () => {
++    vi.useFakeTimers();
++    vi.setSystemTime(2_000_000_000_000);
++    try {
++      vi.mocked(api.fetchPayerTransfers).mockResolvedValue({
++        transfers: [
++          transfer({ transferId: "soon", consentExpiresAtEpoch: 2_000_000_001, effectiveFrom: 2_000_000_100 }),
++          transfer({ transferId: "later", consentExpiresAtEpoch: 2_000_000_600, effectiveFrom: 2_000_000_700 }),
++        ],
++        nextCursor: null,
++      });
++      render(<PayerTransferInbox />);
++      await act(async () => { await vi.advanceTimersByTimeAsync(0); });
++      expect(screen.getAllByRole("button", { name: "Accept transfer request" })).toHaveLength(2);
++
++      await act(async () => { await vi.advanceTimersByTimeAsync(1_000); });
++      expect(screen.getAllByRole("button", { name: "Accept transfer request" })).toHaveLength(1);
++      expect(screen.getByText(/expired at the renewal boundary/i)).toBeInTheDocument();
++      expect(api.fetchPayerTransfers).toHaveBeenCalledTimes(1);
++    } finally {
++      vi.useRealTimers();
++    }
++  });
++
+   it("keeps personal payer invitations unaccepted until setup is available", async () => {
+     vi.mocked(api.fetchPayerTransferCapabilities).mockResolvedValue({ available: true, setupAvailable: false });
+     vi.mocked(api.fetchPayerTransfers).mockResolvedValue({ transfers: [transfer({
+@@ -157,6 +229,65 @@ describe("payer transfer journeys", () => {
+     expect(await screen.findByText(/The other payer must accept it/)).toBeInTheDocument();
+   });
+ 
++  it("shows a recoverable error when the initial organisation lookup fails", async () => {
++    vi.mocked(api.fetchOrgs).mockRejectedValue(new Error("Synthetic network error"));
++    render(<PersonalTransferStart />);
++    expect(await screen.findByRole("alert")).toHaveTextContent(/organisations could not be loaded/i);
++    expect(screen.getByRole("button", { name: "Retry" })).toBeEnabled();
++    expect(screen.queryByLabelText("Organisation")).not.toBeInTheDocument();
++    expect(api.quotePayerTransfer).not.toHaveBeenCalled();
++    expect(api.beginPayerTransfer).not.toHaveBeenCalled();
++  });
++
++  it("reloads initial data in place after a successful retry", async () => {
++    const firstOrgs = deferred<api.Org[]>();
++    vi.mocked(api.fetchOrgs).mockReturnValueOnce(firstOrgs.promise);
++    render(<PersonalTransferStart />);
++    await waitFor(() => expect(api.fetchPayerTransferCapabilities).toHaveBeenCalled());
++    await act(async () => { firstOrgs.reject(new Error("Synthetic network error")); });
++    expect(await screen.findByRole("alert")).toBeInTheDocument();
++
++    const retryOrgs = deferred<api.Org[]>();
++    vi.mocked(api.fetchOrgs).mockReturnValueOnce(retryOrgs.promise);
++    fireEvent.click(screen.getByRole("button", { name: "Retry" }));
++    const retrying = await screen.findByRole("button", { name: "Retrying…" });
++    expect(retrying).toBeDisabled();
++    expect(screen.getByRole("status")).toHaveTextContent(/Loading organisations/i);
++    expect(api.quotePayerTransfer).not.toHaveBeenCalled();
++    expect(api.beginPayerTransfer).not.toHaveBeenCalled();
++
++    fireEvent.click(retrying);
++    expect(api.fetchOrgs).toHaveBeenCalledTimes(2);
++
++    await act(async () => { retryOrgs.resolve([org("org-b", "member")]); });
++    expect(await screen.findByLabelText("Organisation")).toBeInTheDocument();
++    expect(screen.getByRole("option", { name: /org-b/ })).toBeInTheDocument();
++    expect(screen.queryByRole("alert")).not.toBeInTheDocument();
++    expect(api.quotePayerTransfer).not.toHaveBeenCalled();
++    expect(api.beginPayerTransfer).not.toHaveBeenCalled();
++  });
++
++  it("keeps the personal transfer section recoverable after a repeated organisation failure", async () => {
++    vi.mocked(api.fetchOrgs)
++      .mockRejectedValueOnce(new Error("Synthetic network error"))
++      .mockRejectedValueOnce(new Error("Synthetic network error"));
++    render(<PersonalTransferStart />);
++    expect(await screen.findByRole("alert")).toBeInTheDocument();
++    fireEvent.click(screen.getByRole("button", { name: "Retry" }));
++    expect(await screen.findByRole("alert")).toHaveTextContent(/organisations could not be loaded/i);
++    expect(screen.getByRole("button", { name: "Retry" })).toBeEnabled();
++    expect(screen.queryByLabelText("Organisation")).not.toBeInTheDocument();
++  });
++
++  it("still hides personal transfer start when the server reports transfers unavailable", async () => {
++    vi.mocked(api.fetchPayerTransferCapabilities).mockResolvedValue({ available: false, setupAvailable: false });
++    const view = render(<PersonalTransferStart />);
++    await waitFor(() => expect(api.fetchPayerTransferCapabilities).toHaveBeenCalled());
++    expect(view.container).toBeEmptyDOMElement();
++    expect(api.fetchOrgs).not.toHaveBeenCalled();
++    expect(screen.queryByRole("button", { name: "Retry" })).not.toBeInTheDocument();
++  });
++
+   it("does not claim a second payer must accept when the caller can authorise both sides", async () => {
+     vi.mocked(api.fetchOrgs).mockResolvedValue([org("org-b", "admin")]);
+     vi.mocked(api.fetchMembers).mockResolvedValue([member("user-1", "owner")]);

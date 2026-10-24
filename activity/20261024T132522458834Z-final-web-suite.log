@@ -1,0 +1,36 @@
+
+> sotto-web@0.9.0 test
+> vitest run --maxWorkers=1
+
+
+ RUN  v5.0.5 /workspace/sotto/web
+
+ ❯ src/__tests__/base64.test.tsx (9 tests | 1 failed) 20047ms
+   ❯ base64 helpers (9)
+     × matches an independent encoder and round-trips 1048576 binary bytes 18449ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/base64.test.tsx > base64 helpers > matches an independent encoder and round-trips 1048576 binary bytes
+Error: Test timed out in 15000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/__tests__/base64.test.tsx:32:45
+     30|   });
+     31|
+     32|   it.each([32767, 32768, 32769, 1024 * 1024])(
+       |                                             ^
+     33|     "matches an independent encoder and round-trips %i binary bytes",
+     34|     (length) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 27 passed (28)
+      Tests  1 failed | 272 passed (273)
+   Start at  13:25:24
+   Duration  108.87s (tests 42%, environment 33%, import 16%, transform 8%, worker 1%)
+
+Environment  happy-dom was created 28 times · 30.38s total, 33% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

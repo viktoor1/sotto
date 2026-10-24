@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "validatedAt": "2026-10-21T00:18:45.887Z",
+  "browser": "154.0.8037.57",
+  "delivery": "Self-contained HTML served over local HTTP; managed browser blocks file URLs",
+  "checks": [
+    {
+      "name": "Self-contained HTML renders locally without script errors or external requests",
+      "status": "passed"
+    },
+    {
+      "name": "Every previewable HTML file is fully built, including the old template tab path",
+      "status": "passed"
+    },
+    {
+      "name": "Sandboxed embedded preview renders and synchronizes navigation, code and copying",
+      "status": "passed"
+    },
+    {
+      "name": "Every current excerpt and its line numbers match the real repository source",
+      "status": "passed"
+    },
+    {
+      "name": "Graph selection synchronizes title, source, status and state trace",
+      "status": "passed"
+    },
+    {
+      "name": "Proposed-only node clearly switches to the unapplied proposal",
+      "status": "passed"
+    },
+    {
+      "name": "Diff presents additions/removals and copy preserves the displayed diff",
+      "status": "passed"
+    },
+    {
+      "name": "Every route step in all three modes has synchronized code and evidence",
+      "status": "passed"
+    },
+    {
+      "name": "Repeated failure loops and empty success remain distinct",
+      "status": "passed"
+    },
+    {
+      "name": "Keyboard navigation, mode tabs, boundaries and help work",
+      "status": "passed"
+    },
+    {
+      "name": "Zoom, pointer-centred wheel zoom, pan and fit-to-view work",
+      "status": "passed"
+    },
+    {
+      "name": "Journal checkpoints and original analysis are retained independently",
+      "status": "passed"
+    },
+    {
+      "name": "Selected route/view/step survives reload and exports a task-only snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "Responsive layouts render without horizontal page overflow",
+      "status": "passed"
+    }
+  ],
+  "scriptErrors": [],
+  "remoteRequests": [],
+  "sottoSourceChanged": false,
+  "scope": "Walkthrough interface validation; no Sotto regression test or repair was executed."
+}

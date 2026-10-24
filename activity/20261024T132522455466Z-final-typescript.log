@@ -1,0 +1,4 @@
+
+> sotto-web@0.9.0 typecheck
+> tsc -p tsconfig.json && tsc -p tsconfig.node.json
+

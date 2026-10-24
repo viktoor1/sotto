@@ -1,0 +1,11 @@
+{
+  "oldBranch": "work",
+  "oldHead": "07f32e5cbdc758ddebfbc8a431302b93d2daa98a",
+  "newBranch": "fix/637-administrator-retry",
+  "upstreamMain": "de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757",
+  "originalWorkHashes": {
+    "web/src/PayerTransferStart.tsx": "c04babff16c506e9e88fdbbe20c6139354d2a1d34089d15a944af4da287306fe",
+    "web/src/__tests__/PayerTransferJourneys.test.tsx": "78366594f12a88910e234534a827a4c4253b26cb80d210a45ddb961e99af2999"
+  },
+  "patchSha256": "6fe1fec7871c6204bb8fdd5373a0520a7842b700fd7dd55e6665945a6b1d2370"
+}

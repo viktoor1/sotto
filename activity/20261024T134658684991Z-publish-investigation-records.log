@@ -1,0 +1,725 @@
+Running: git init -b evidence/637-investigation
+Initialized empty Git repository in /tmp/sotto-637-evidence-e6ij_e5o/.git/
+Running: git remote add origin https://github.com/viktoor1/sotto.git
+Running: git config user.name Ivanov Viktor
+Running: git config user.email iviktoor10@gmail.com
+Issue-specific evidence files copied: 136
+Running: git add --all
+Running: git diff --cached --check
+activity/20261024-issue-637.html:5: trailing whitespace.
++  
+activity/20261024-issue-637.html:10: trailing whitespace.
++  
+activity/20261024-issue-637.html:40: trailing whitespace.
++  
+activity/20261024-issue-637.html:60: trailing whitespace.
++  
+activity/20261024-issue-637.html:142: trailing whitespace.
++  
+activity/20261024-issue-637.html:153: trailing whitespace.
++    
+activity/20261024-issue-637.html:164: trailing whitespace.
++  
+activity/20261024-issue-637.html:179: trailing whitespace.
++  
+activity/20261024-issue-637.html:186: trailing whitespace.
++  
+activity/20261024-issue-637.html:190: trailing whitespace.
++    
+activity/20261024-issue-637.html:202: trailing whitespace.
++  
+activity/20261024-issue-637.html:225: trailing whitespace.
++  
+activity/20261024-issue-637.html:259: trailing whitespace.
++      
+activity/20261024-issue-637.html:266: trailing whitespace.
++</span>      
+activity/20261024-issue-637.html:276: trailing whitespace.
++  
+activity/20261024-issue-637.html:285: trailing whitespace.
++      
+activity/20261024-issue-637.html:297: trailing whitespace.
++  
+activity/20261024-issue-637.html:303: trailing whitespace.
++          
+activity/20261024-issue-637.html:322: trailing whitespace.
++  
+activity/20261024-issue-637.html:330: trailing whitespace.
++  
+activity/20261024-issue-637.html:344: trailing whitespace.
++  
+activity/20261024-issue-637.html:365: trailing whitespace.
++    
+activity/20261024-issue-637.html:374: trailing whitespace.
++      
+activity/20261024-issue-637.html:384: trailing whitespace.
++    
+activity/20261024-issue-637.html:400: trailing whitespace.
++      
+activity/20261024-issue-637.html:401: trailing whitespace.
++      
+activity/20261024-issue-637.html:402: trailing whitespace.
++    
+activity/20261024-issue-637.html:405: trailing whitespace.
++    
+activity/20261024-issue-637.html:414: trailing whitespace.
++  
+activity/20261024-issue-637.html:445: trailing whitespace.
++  
+activity/20261024-issue-637.html:451: trailing whitespace.
++  
+activity/20261024-issue-637.html:457: trailing whitespace.
++    
+activity/20261024-issue-637.html:461: trailing whitespace.
++    
+activity/20261024-issue-637.html:462: trailing whitespace.
++      
+activity/20261024-issue-637.html:463: trailing whitespace.
++    
+activity/20261024-issue-637.html:629: trailing whitespace.
++  
+activity/20261024-issue-637.html:643: trailing whitespace.
++  
+activity/20261024-issue-637.html:699: trailing whitespace.
++  
+activity/20261024-issue-637.html:749: trailing whitespace.
++          
+activity/20261024-issue-637.html:856: new blank line at EOF.
+activity/20261024-open-prs-page-2.html:5: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:10: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:40: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:61: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:103: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:155: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:166: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:181: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:188: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:204: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:369: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:373: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:402: trailing whitespace.
++      
+activity/20261024-open-prs-page-2.html:409: trailing whitespace.
++</span>      
+activity/20261024-open-prs-page-2.html:420: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:429: trailing whitespace.
++      
+activity/20261024-open-prs-page-2.html:442: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:448: trailing whitespace.
++          
+activity/20261024-open-prs-page-2.html:468: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:476: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:490: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:511: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:520: trailing whitespace.
++      
+activity/20261024-open-prs-page-2.html:530: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:546: trailing whitespace.
++      
+activity/20261024-open-prs-page-2.html:547: trailing whitespace.
++      
+activity/20261024-open-prs-page-2.html:548: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:551: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:560: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:592: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:598: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:604: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:608: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:609: trailing whitespace.
++      
+activity/20261024-open-prs-page-2.html:610: trailing whitespace.
++    
+activity/20261024-open-prs-page-2.html:630: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:650: trailing whitespace.
++  
+activity/20261024-open-prs-page-2.html:700: trailing whitespace.
++          
+activity/20261024-open-prs-page-2.html:807: new blank line at EOF.
+activity/20261024-open-prs-page-3.html:5: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:10: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:40: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:61: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:103: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:155: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:166: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:181: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:188: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:204: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:369: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:373: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:402: trailing whitespace.
++      
+activity/20261024-open-prs-page-3.html:409: trailing whitespace.
++</span>      
+activity/20261024-open-prs-page-3.html:420: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:429: trailing whitespace.
++      
+activity/20261024-open-prs-page-3.html:442: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:448: trailing whitespace.
++          
+activity/20261024-open-prs-page-3.html:468: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:476: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:490: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:511: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:520: trailing whitespace.
++      
+activity/20261024-open-prs-page-3.html:530: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:546: trailing whitespace.
++      
+activity/20261024-open-prs-page-3.html:547: trailing whitespace.
++      
+activity/20261024-open-prs-page-3.html:548: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:551: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:560: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:592: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:598: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:604: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:608: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:609: trailing whitespace.
++      
+activity/20261024-open-prs-page-3.html:610: trailing whitespace.
++    
+activity/20261024-open-prs-page-3.html:630: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:650: trailing whitespace.
++  
+activity/20261024-open-prs-page-3.html:700: trailing whitespace.
++          
+activity/20261024-open-prs-page-3.html:807: new blank line at EOF.
+activity/20261024-open-prs-page-4.html:5: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:10: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:40: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:61: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:103: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:155: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:166: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:181: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:188: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:204: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:369: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:373: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:402: trailing whitespace.
++      
+activity/20261024-open-prs-page-4.html:409: trailing whitespace.
++</span>      
+activity/20261024-open-prs-page-4.html:420: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:429: trailing whitespace.
++      
+activity/20261024-open-prs-page-4.html:442: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:448: trailing whitespace.
++          
+activity/20261024-open-prs-page-4.html:468: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:476: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:490: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:511: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:520: trailing whitespace.
++      
+activity/20261024-open-prs-page-4.html:530: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:546: trailing whitespace.
++      
+activity/20261024-open-prs-page-4.html:547: trailing whitespace.
++      
+activity/20261024-open-prs-page-4.html:548: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:551: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:560: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:592: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:598: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:604: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:608: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:609: trailing whitespace.
++      
+activity/20261024-open-prs-page-4.html:610: trailing whitespace.
++    
+activity/20261024-open-prs-page-4.html:630: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:650: trailing whitespace.
++  
+activity/20261024-open-prs-page-4.html:700: trailing whitespace.
++          
+activity/20261024-open-prs-page-4.html:807: new blank line at EOF.
+activity/20261024-open-prs-page-5.html:5: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:10: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:40: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:61: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:103: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:155: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:166: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:181: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:188: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:204: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:369: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:373: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:402: trailing whitespace.
++      
+activity/20261024-open-prs-page-5.html:409: trailing whitespace.
++</span>      
+activity/20261024-open-prs-page-5.html:420: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:429: trailing whitespace.
++      
+activity/20261024-open-prs-page-5.html:442: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:448: trailing whitespace.
++          
+activity/20261024-open-prs-page-5.html:468: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:476: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:490: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:511: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:520: trailing whitespace.
++      
+activity/20261024-open-prs-page-5.html:530: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:546: trailing whitespace.
++      
+activity/20261024-open-prs-page-5.html:547: trailing whitespace.
++      
+activity/20261024-open-prs-page-5.html:548: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:551: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:560: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:592: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:598: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:604: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:608: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:609: trailing whitespace.
++      
+activity/20261024-open-prs-page-5.html:610: trailing whitespace.
++    
+activity/20261024-open-prs-page-5.html:630: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:650: trailing whitespace.
++  
+activity/20261024-open-prs-page-5.html:700: trailing whitespace.
++          
+activity/20261024-open-prs-page-5.html:807: new blank line at EOF.
+activity/20261024-open-prs.html:5: trailing whitespace.
++  
+activity/20261024-open-prs.html:10: trailing whitespace.
++  
+activity/20261024-open-prs.html:40: trailing whitespace.
++  
+activity/20261024-open-prs.html:61: trailing whitespace.
++  
+activity/20261024-open-prs.html:103: trailing whitespace.
++  
+activity/20261024-open-prs.html:155: trailing whitespace.
++    
+activity/20261024-open-prs.html:166: trailing whitespace.
++  
+activity/20261024-open-prs.html:181: trailing whitespace.
++  
+activity/20261024-open-prs.html:188: trailing whitespace.
++  
+activity/20261024-open-prs.html:192: trailing whitespace.
++    
+activity/20261024-open-prs.html:204: trailing whitespace.
++  
+activity/20261024-open-prs.html:369: trailing whitespace.
++  
+activity/20261024-open-prs.html:373: trailing whitespace.
++    
+activity/20261024-open-prs.html:402: trailing whitespace.
++      
+activity/20261024-open-prs.html:409: trailing whitespace.
++</span>      
+activity/20261024-open-prs.html:420: trailing whitespace.
++  
+activity/20261024-open-prs.html:429: trailing whitespace.
++      
+activity/20261024-open-prs.html:442: trailing whitespace.
++  
+activity/20261024-open-prs.html:448: trailing whitespace.
++          
+activity/20261024-open-prs.html:468: trailing whitespace.
++  
+activity/20261024-open-prs.html:476: trailing whitespace.
++  
+activity/20261024-open-prs.html:490: trailing whitespace.
++  
+activity/20261024-open-prs.html:511: trailing whitespace.
++    
+activity/20261024-open-prs.html:520: trailing whitespace.
++      
+activity/20261024-open-prs.html:530: trailing whitespace.
++    
+activity/20261024-open-prs.html:546: trailing whitespace.
++      
+activity/20261024-open-prs.html:547: trailing whitespace.
++      
+activity/20261024-open-prs.html:548: trailing whitespace.
++    
+activity/20261024-open-prs.html:551: trailing whitespace.
++    
+activity/20261024-open-prs.html:560: trailing whitespace.
++  
+activity/20261024-open-prs.html:592: trailing whitespace.
++  
+activity/20261024-open-prs.html:598: trailing whitespace.
++  
+activity/20261024-open-prs.html:604: trailing whitespace.
++    
+activity/20261024-open-prs.html:608: trailing whitespace.
++    
+activity/20261024-open-prs.html:609: trailing whitespace.
++      
+activity/20261024-open-prs.html:610: trailing whitespace.
++    
+activity/20261024-open-prs.html:630: trailing whitespace.
++  
+activity/20261024-open-prs.html:650: trailing whitespace.
++  
+activity/20261024-open-prs.html:700: trailing whitespace.
++          
+activity/20261024-open-prs.html:807: new blank line at EOF.
+activity/20261024T131549557469Z-regression-before-repair.log:178: new blank line at EOF.
+activity/20261024T131607179358Z-regression-diff.log:8: trailing whitespace.
++ 
+activity/20261024T132039556157Z-regression-after-repair.log:13: new blank line at EOF.
+activity/20261024T132048957816Z-deferred-helper-reference.log:136: new blank line at EOF.
+activity/20261024T132147054493Z-recovery-matrix.log:13: new blank line at EOF.
+activity/20261024T132153411463Z-production-repair-diff.log:15: trailing whitespace.
++ 
+activity/20261024T132153411463Z-production-repair-diff.log:20: trailing whitespace.
++ 
+activity/20261024T132153411463Z-production-repair-diff.log:50: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:430: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:451: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:511: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:559: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:569: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:574: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:591: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:636: trailing whitespace.
++ 
+activity/20261024T132316814863Z-upstream-comparison.log:667: trailing whitespace.
++ 
+activity/20261024T132522455466Z-final-typescript.log:4: new blank line at EOF.
+activity/20261024T132522458834Z-final-web-suite.log:36: new blank line at EOF.
+activity/20261024T132542112105Z-final-source-diff.log:19: trailing whitespace.
++ 
+activity/20261024T132542112105Z-final-source-diff.log:22: trailing whitespace.
++ 
+activity/20261024T132542112105Z-final-source-diff.log:52: trailing whitespace.
++ 
+activity/20261024T132755099872Z-base64-isolated-timeout-investigation.log:32: new blank line at EOF.
+activity/20261024T133020151552Z-final-payer-transfer-suite.log:13: new blank line at EOF.
+activity/20261024T133319635643Z-final-solution-manifest.log:5: new blank line at EOF.
+activity/20261024T134236367338Z-submission-preflight.log:18: new blank line at EOF.
+activity/20261024T134353705952Z-commit-reviewed-repair.log:10: trailing whitespace.
++    
+activity/20261024T134353705952Z-commit-reviewed-repair.log:14: trailing whitespace.
++    
+activity/20261024T134353705952Z-commit-reviewed-repair.log:17: trailing whitespace.
++    
+activity/20261024T134353705952Z-commit-reviewed-repair.log:21: new blank line at EOF.
+activity/20261024T134442623949Z-push-reviewed-repair.log:1: trailing whitespace.
++remote: 
+activity/20261024T134442623949Z-push-reviewed-repair.log:2: trailing whitespace.
++remote: Create a pull request for 'fix/637-administrator-retry' on GitHub by visiting:        
+activity/20261024T134442623949Z-push-reviewed-repair.log:3: trailing whitespace.
++remote:      https://github.com/viktoor1/sotto/pull/new/fix/637-administrator-retry        
+activity/20261024T134442623949Z-push-reviewed-repair.log:4: trailing whitespace.
++remote: 
+before-upstream-update-20261024T132424Z/original-base-repair.patch:15: trailing whitespace.
++ 
+before-upstream-update-20261024T132424Z/original-base-repair.patch:20: trailing whitespace.
++ 
+before-upstream-update-20261024T132424Z/original-base-repair.patch:50: trailing whitespace.
++ 
+before-upstream-update-20261024T132424Z/original-base-repair.patch:92: trailing whitespace.
++ 
+before-upstream-update-20261024T132424Z/original-base-repair.patch:97: trailing whitespace.
++ 
+before-upstream-update-20261024T132424Z/original-base-repair.patch:114: trailing whitespace.
++ 
+historical-issue-evidence/issue-637-baseline.log:13: new blank line at EOF.
+historical-issue-evidence/issue-637-pr-search.html:5: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:10: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:13: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:40: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:61: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:103: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:154: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:165: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:180: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:187: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:191: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:203: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:366: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:370: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:399: trailing whitespace.
++      
+historical-issue-evidence/issue-637-pr-search.html:406: trailing whitespace.
++</span>      
+historical-issue-evidence/issue-637-pr-search.html:418: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:427: trailing whitespace.
++      
+historical-issue-evidence/issue-637-pr-search.html:440: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:446: trailing whitespace.
++          
+historical-issue-evidence/issue-637-pr-search.html:467: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:475: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:489: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:510: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:519: trailing whitespace.
++      
+historical-issue-evidence/issue-637-pr-search.html:529: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:545: trailing whitespace.
++      
+historical-issue-evidence/issue-637-pr-search.html:546: trailing whitespace.
++      
+historical-issue-evidence/issue-637-pr-search.html:547: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:550: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:559: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:600: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:606: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:612: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:616: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:617: trailing whitespace.
++      
+historical-issue-evidence/issue-637-pr-search.html:618: trailing whitespace.
++    
+historical-issue-evidence/issue-637-pr-search.html:638: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:658: trailing whitespace.
++  
+historical-issue-evidence/issue-637-pr-search.html:708: trailing whitespace.
++          
+historical-issue-evidence/issue-637-pr-search.html:815: new blank line at EOF.
+historical-issue-evidence/issue-637.html:5: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:10: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:13: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:40: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:60: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:141: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:152: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:163: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:178: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:185: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:189: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:201: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:224: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:258: trailing whitespace.
++      
+historical-issue-evidence/issue-637.html:265: trailing whitespace.
++</span>      
+historical-issue-evidence/issue-637.html:276: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:285: trailing whitespace.
++      
+historical-issue-evidence/issue-637.html:297: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:303: trailing whitespace.
++          
+historical-issue-evidence/issue-637.html:323: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:331: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:345: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:366: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:375: trailing whitespace.
++      
+historical-issue-evidence/issue-637.html:385: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:401: trailing whitespace.
++      
+historical-issue-evidence/issue-637.html:402: trailing whitespace.
++      
+historical-issue-evidence/issue-637.html:403: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:406: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:415: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:455: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:461: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:467: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:471: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:472: trailing whitespace.
++      
+historical-issue-evidence/issue-637.html:473: trailing whitespace.
++    
+historical-issue-evidence/issue-637.html:636: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:650: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:706: trailing whitespace.
++  
+historical-issue-evidence/issue-637.html:756: trailing whitespace.
++          
+historical-issue-evidence/issue-637.html:863: new blank line at EOF.
+solution.patch:19: trailing whitespace.
++ 
+solution.patch:22: trailing whitespace.
++ 
+solution.patch:52: trailing whitespace.
++ 
+solution.patch:92: trailing whitespace.
++ 
+stage-3-regression.patch:8: trailing whitespace.
++ 
+Traceback (most recent call last):
+  File "/workspace/scratch/sotto-637/publish-evidence.py", line 49, in <module>
+    run(["git", "diff", "--cached", "--check"], dest)
+  File "/workspace/scratch/sotto-637/publish-evidence.py", line 17, in run
+    return subprocess.run(args, cwd=cwd, check=True, text=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.

@@ -1,0 +1,15 @@
+PASS Self-contained HTML renders locally without script errors or external requests
+PASS Every previewable HTML file is fully built, including the old template tab path
+PASS Sandboxed embedded preview renders and synchronizes navigation, code and copying
+PASS Every current excerpt and its line numbers match the real repository source
+PASS Graph selection synchronizes title, source, status and state trace
+PASS Proposed-only node clearly switches to the unapplied proposal
+PASS Diff presents additions/removals and copy preserves the displayed diff
+PASS Every route step in all three modes has synchronized code and evidence
+PASS Repeated failure loops and empty success remain distinct
+PASS Keyboard navigation, mode tabs, boundaries and help work
+PASS Zoom, pointer-centred wheel zoom, pan and fit-to-view work
+PASS Journal checkpoints and original analysis are retained independently
+PASS Selected route/view/step survives reload and exports a task-only snapshot
+PASS Responsive layouts render without horizontal page overflow
+14 interface validation groups passed

@@ -1,0 +1,304 @@
+Web: retry failed administrator loading without changing the payer-transfer organisation · Issue #637 · getsotto/sotto · GitHub
+Skip to content
+Navigation Menu
+Sign in
+Appearance settings
+Platform
+AI CODE CREATION
+GitHub Copilot
+Write better code with AI
+GitHub Copilot app
+Direct agents from issue to merge
+MCP Registry
+Integrate external tools
+DEVELOPER WORKFLOWS
+Actions
+Automate any workflow
+Codespaces
+Instant dev environments
+Issues
+Plan and track work
+Code Review
+Manage code changes
+Code Quality
+Enforce quality at merge
+APPLICATION SECURITY
+GitHub Advanced Security
+Find and fix vulnerabilities
+Code security
+Secure your code as you build
+Secret protection
+Stop leaks before they start
+EXPLORE
+Why GitHub
+Documentation
+Blog
+Changelog
+Marketplace
+View all features
+Solutions
+BY COMPANY SIZE
+Enterprises
+Small and medium teams
+Startups
+Nonprofits
+BY USE CASE
+App Modernization
+DevSecOps
+DevOps
+CI/CD
+View all use cases
+BY INDUSTRY
+Healthcare
+Financial services
+Manufacturing
+Government
+View all industries
+View all solutions
+Resources
+EXPLORE BY TOPIC
+AI
+Software Development
+DevOps
+Security
+View all topics
+EXPLORE BY TYPE
+Customer stories
+Events & webinars
+Ebooks & reports
+Business insights
+GitHub Skills
+SUPPORT & SERVICES
+Documentation
+Customer support
+Community forum
+Trust center
+Partners
+View all resources
+Open Source
+COMMUNITY
+GitHub Sponsors
+Fund open source developers
+PROGRAMS
+Security Lab
+Maintainer Community
+GitHub Stars
+Archive Program
+REPOSITORIES
+Topics
+Trending
+Collections
+Enterprise
+ENTERPRISE SOLUTIONS
+Enterprise platform
+AI-powered developer platform
+AVAILABLE ADD-ONS
+GitHub Advanced Security
+Enterprise-grade security features
+Copilot for Business
+Enterprise-grade AI features
+Premium Support
+Enterprise-grade 24/7 support
+Pricing
+Search
+/
+Sign in
+Sign up
+Appearance settings
+You signed in with another tab or window.
+Reload
+to refresh your session.
+You signed out in another tab or window.
+Reload
+to refresh your session.
+You switched accounts on another tab or window.
+Reload
+to refresh your session.
+Dismiss alert
+{{ message }}
+getsotto
+sotto
+Repository navigation
+Code
+Issues
+42
+(
+42
+)
+Pull requests
+18
+(
+18
+)
+Discussions
+Actions
+Projects
+Security and quality
+Insights
+More
+items
+Web: retry failed administrator loading without changing the payer-transfer organisation
+#637
+New issue
+Copy link
+New issue
+Copy link
+Open
+Open
+Web: retry failed administrator loading without changing the payer-transfer organisation
+#637
+Copy link
+Assignees
+Labels
+bug
+Something isn't working
+Something isn't working
+good first issue
+Good for newcomers
+Good for newcomers
+help wanted
+Extra attention is needed
+Extra attention is needed
+Description
+Maxerns
+opened
+on Oct 19, 2026
+Issue body actions
+What happens
+In
+Change who pays
+, choosing an organisation loads its members so the user can select the other payer's administrator. If that request fails, the form says:
+The transfer service is temporarily unavailable. Try again shortly.
+However, the administrator selector contains only its placeholder,
+Review payer transfer
+is disabled, and there is no retry action. The selected organisation remains unchanged. Users must discover that clearing and reselecting it starts another request, or reload the page.
+Reproduction
+Verified on main
+07f32e5cbdc758ddebfbc8a431302b93d2daa98a
+, macOS arm64, Node 24.15.0, Vitest 5.0.0 / happy-dom, using a temporary component probe in a clean checkout:
+Render the real
+PersonalTransferStart
+with synthetic available capabilities, a signed-in account and an organisation
+org-b
+.
+Make the first
+fetchMembers("org-b")
+reject with
+Error("server error (503)")
+; configure the next call to return one owner.
+Choose
+org-b
+. Observe the error, the empty administrator selector, the disabled review button and the absence of a retry control. The members API has been called once.
+Choose the blank organisation option and then
+org-b
+again. The owner loads; selecting them enables
+Review payer transfer
+.
+The probe passed against unchanged production code and was removed after verification. It made no quote, transfer or payment request. All APIs were mocked; no live account or native browser journey was exercised.
+Expected behaviour
+After administrator discovery fails, users can explicitly retry for the currently selected organisation without changing that selection or reloading the page.
+Acceptance criteria
+A failed members request exposes a clearly labelled retry control for the selected organisation, alongside the existing accessible error.
+Retry preserves the selected organisation, clears the previous discovery error while loading and prevents overlapping retry requests. It does not fetch a quote or create a transfer.
+A successful retry repopulates eligible administrator choices and removes the recovery control/error. Selecting an administrator enables the existing review flow.
+A second failure restores the retry control. A successful empty result is not presented as a request failure.
+Changing or clearing the organisation clears recovery state associated with the old selection. Keep member-discovery errors distinct from quote/submission errors so those failures do not offer the wrong retry action.
+Add component tests for initial failure, pending retry, repeated failure and recovery using deferred promises and synthetic fixtures; pass the web test suite.
+Starting points
+PersonalTransferStart
+in PayerTransferStart.tsx
+:
+chooseOrganisation
+,
+members
+, the shared error state and the rendered controls.
+PayerTransferJourneys.test.tsx
+: existing API mocks and organisation/member fixtures.
+Keep this scoped to administrator discovery in the personal transfer-start form. No transfer authority, billing rules, server API or sponsored-transfer changes are needed. Open/closed issues and open PRs were checked for overlap;
+#635
+covers inbox pagination, not this form.
+Suitable for a first contribution using the existing React state and test patterns. Follow
+CONTRIBUTING.md
+, including DCO sign-off (
+git commit -s
+).
+Reactions are currently unavailable
+Activity
+Maxerns
+added
+bug
+Something isn't working
+Something isn't working
+help wanted
+Extra attention is needed
+Extra attention is needed
+good first issue
+Good for newcomers
+Good for newcomers
+on Oct 19, 2026
+viktoor1
+commented
+on
+Oct 19, 2026
+viktoor1
+on Oct 19, 2026
+More actions
+Hey. I'd like to work on this issue. I've reviewed the scope and existing tests, and I'll aim to submit a focused PR with coverage for the retry and recovery cases. I'll be using AI-assisted development and reviewing the changes and test results myself.
+Maxerns
+assigned
+viktoor1
+on Oct 20, 2026
+Maxerns
+commented
+on
+Oct 20, 2026
+Maxerns
+on Oct 20, 2026
+Collaborator
+Author
+More actions
+Hey. I'd like to work on this issue. I've reviewed the scope and existing tests, and I'll aim to submit a focused PR with coverage for the retry and recovery cases. I'll be using AI-assisted development and reviewing the changes and test results myself.
+Sounds good, I've assigned it to you
+Sign up for free
+to join this conversation on GitHub.
+Already have an account?
+Sign in to comment
+Metadata
+Metadata
+Assignees
+viktoor1
+Labels
+bug
+Something isn't working
+Something isn't working
+good first issue
+Good for newcomers
+Good for newcomers
+help wanted
+Extra attention is needed
+Extra attention is needed
+Type
+No type
+Projects
+No projects
+Milestone
+No milestone
+Relationships
+None yet
+Development
+No branches or pull requests
+Issue actions
+Open in GitHub Copilot app
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
+You can’t perform that action at this time.

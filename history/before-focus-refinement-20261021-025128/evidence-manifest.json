@@ -1,0 +1,12 @@
+{
+  "commit": "07f32e5cbdc758ddebfbc8a431302b93d2daa98a",
+  "sourceHashes": {
+    "web/src/PayerTransferStart.tsx": "ff426933fb9c4dc30e5c17f25a03e4e4346a112322f2b69f34388e23cb38725f",
+    "web/src/__tests__/PayerTransferJourneys.test.tsx": "25a4e9eb278d01eb32b1c5ebe7f56de52f71dd53888bbfc508f1804916f919b1",
+    "web/src/api.ts": "ff387b3ebba407bfcced94f1c9595a2baea544c5f9c62fc61d5092eb74785d1d"
+  },
+  "builtAt": "2026-10-21T02:18:20+02:00",
+  "baselineTests": 12,
+  "regressionTests": 0,
+  "repairApplied": false
+}

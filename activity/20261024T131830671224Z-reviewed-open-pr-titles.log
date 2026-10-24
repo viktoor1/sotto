@@ -1,0 +1,31 @@
+Reviewed 28 open PR titles across two nonempty pages.
+https://github.com/getsotto/sotto/pull/702 fix(web): verify the account key material before showing the unlocked vault
+https://github.com/getsotto/sotto/pull/698 fix(web): name the response deadline when an invitation expires before renewal
+https://github.com/getsotto/sotto/pull/694 feat(cli): add JSON output for declared task listings
+https://github.com/getsotto/sotto/pull/689 Fix payer transfer decline loading label
+https://github.com/getsotto/sotto/pull/681 test(web): cover the landing terminal's reduced-motion behaviour
+https://github.com/getsotto/sotto/pull/680 test(web): cover verified contact removal failure and recovery
+https://github.com/getsotto/sotto/pull/679 fix(web): make the contact settings status retry single-flight
+https://github.com/getsotto/sotto/pull/678 fix(tui): select the clicked secret row
+https://github.com/getsotto/sotto/pull/675 feat: add JSON output for environment copies
+https://github.com/getsotto/sotto/pull/669 docs: explain listing and revoking existing share links
+https://github.com/getsotto/sotto/pull/664 fix(web): run the .test.ts unit suites too
+https://github.com/getsotto/sotto/pull/655 docs: walk recipients through cloning a shared environment
+https://github.com/getsotto/sotto/pull/654 test(web): cover personal checkout failure and retry
+https://github.com/getsotto/sotto/pull/653 test(web): cover payer-transfer setup return notices and URL cleanup
+https://github.com/getsotto/sotto/pull/651 test(web): cover recovery after a failed payer-transfer acceptance
+https://github.com/getsotto/sotto/pull/650 test(web): cover payer-transfer pagination failure and retry
+https://github.com/getsotto/sotto/pull/619 Docs/secret removal sync guide
+https://github.com/getsotto/sotto/pull/608 docs: explain local locking and CLI logout
+https://github.com/getsotto/sotto/pull/607 docs(cli): explain set input modes and newline handling
+https://github.com/getsotto/sotto/pull/606 test(web): keep team controls usable when seat discovery fails
+https://github.com/getsotto/sotto/pull/605 test(web): cover personal billing portal retries
+https://github.com/getsotto/sotto/pull/469 fix(tui): preserve secret identity when editing
+https://github.com/getsotto/sotto/pull/335 fix: resolve #332 CLI: malformed non-ASCII theme colours crash theme loading
+https://github.com/getsotto/sotto/pull/321 docs: document clipboard requirements and failure modes (#317)
+https://github.com/getsotto/sotto/pull/301 test: cover web Base64 formats and large binary payloads
+https://github.com/getsotto/sotto/pull/263 feat(cli): add JSON output to org ls
+https://github.com/getsotto/sotto/pull/177 fix: handle clipboard API failure in CopyButton (fixes #172)
+https://github.com/getsotto/sotto/pull/176 docs: document frontend toolchain checks
+No title explicitly mentions #637 or administrator discovery. Related payer PR titles describe decline labels, checkout/setup, acceptance and inbox pagination. This is a title-level overlap check, not a review of every PR diff.
+The exploratory pager followed links beyond the final nonempty page because it did not inspect disabled pagination state; stopped at its configured bound. No absence claim was made from that failed command.

@@ -1,0 +1,9 @@
+## work
+
+HEAD 07f32e5cbdc758ddebfbc8a431302b93d2daa98a
+Journal SHA256 96b65f74be007a9d1ea804eb1d530c3f64ba81b4a1bd342dede0ef8ab5aef5c0
+web/src/PayerTransferStart.tsx matches source snapshot
+web/src/__tests__/PayerTransferJourneys.test.tsx matches source snapshot
+web/src/api.ts matches source snapshot
+Previous walkthrough validation passed
+Dependencies installed True

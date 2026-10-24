@@ -1,0 +1,173 @@
+{
+  "recordedAt": "2026-10-24T13:33:19.689762+00:00",
+  "branch": "fix/637-administrator-retry",
+  "baseCommit": "de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757",
+  "productionRepairApplied": true,
+  "readyForHumanReview": false,
+  "submissionApproved": true,
+  "newCommits": 1,
+  "remoteWritesPerformed": true,
+  "sourceHashes": {
+    "web/src/PayerTransferStart.tsx": "93d5ac11ecddf99ba01a6c0d1985305e2f1a5ad5066cc4bddb26dd7004e179bf",
+    "web/src/__tests__/PayerTransferJourneys.test.tsx": "7f5665946c6062b4e2793ad46b934fcb2f0503fd6357f1317a906b00c1b82d23"
+  },
+  "patchSha256": "d115954eabf8f3d75b757a88106359be52748a68c0d27e8fb384235ebc771781",
+  "payerTransferTestsPassed": 28,
+  "newRegressionCases": 9,
+  "fullConfiguredWebSuite": {
+    "passed": 272,
+    "failed": 1,
+    "allPassed": false,
+    "failure": "Existing 1 MiB Base64 15000ms timeout, reproduced on clean upstream"
+  },
+  "typescriptPassed": true,
+  "productionBuildPassed": true,
+  "evidence": {
+    "regression-before-repair": {
+      "id": "regression-before-repair",
+      "startedAt": "2026-10-24T13:15:49.557469+00:00",
+      "finishedAt": "2026-10-24T13:15:51.830288+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx"
+      ],
+      "exitCode": 1,
+      "output": "activity/20261024T131549557469Z-regression-before-repair.log"
+    },
+    "regression-after-repair": {
+      "id": "regression-after-repair",
+      "startedAt": "2026-10-24T13:20:39.556157+00:00",
+      "finishedAt": "2026-10-24T13:20:41.706435+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T132039556157Z-regression-after-repair.log"
+    },
+    "recovery-matrix": {
+      "id": "recovery-matrix",
+      "startedAt": "2026-10-24T13:21:47.054493+00:00",
+      "finishedAt": "2026-10-24T13:21:52.079557+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T132147054493Z-recovery-matrix.log"
+    },
+    "request-lock-negative-control": {
+      "id": "request-lock-negative-control",
+      "startedAt": "2026-10-24T13:22:23.113869+00:00",
+      "finishedAt": "2026-10-24T13:22:26.244950+00:00",
+      "cwd": "/workspace/sotto",
+      "argv": [
+        "python3",
+        "/workspace/scratch/sotto-637/verify-request-lock.py"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T132223113869Z-request-lock-negative-control.log"
+    },
+    "final-web-suite": {
+      "id": "final-web-suite",
+      "startedAt": "2026-10-24T13:25:22.458834+00:00",
+      "finishedAt": "2026-10-24T13:27:13.254440+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1"
+      ],
+      "exitCode": 1,
+      "output": "activity/20261024T132522458834Z-final-web-suite.log"
+    },
+    "final-typescript": {
+      "id": "final-typescript",
+      "startedAt": "2026-10-24T13:25:22.455466+00:00",
+      "finishedAt": "2026-10-24T13:25:35.593494+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm run typecheck"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T132522455466Z-final-typescript.log"
+    },
+    "base64-isolated-timeout-investigation": {
+      "id": "base64-isolated-timeout-investigation",
+      "startedAt": "2026-10-24T13:27:55.099872+00:00",
+      "finishedAt": "2026-10-24T13:28:22.517829+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1 src/__tests__/base64.test.tsx"
+      ],
+      "exitCode": 1,
+      "output": "activity/20261024T132755099872Z-base64-isolated-timeout-investigation.log"
+    },
+    "unchanged-upstream-timeout-check": {
+      "id": "unchanged-upstream-timeout-check",
+      "startedAt": "2026-10-24T13:29:29.540586+00:00",
+      "finishedAt": "2026-10-24T13:29:54.168197+00:00",
+      "cwd": "/workspace/sotto",
+      "argv": [
+        "python3",
+        "/workspace/scratch/sotto-637/verify-upstream-baseline.py"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T132929540586Z-unchanged-upstream-timeout-check.log"
+    },
+    "final-payer-transfer-suite": {
+      "id": "final-payer-transfer-suite",
+      "startedAt": "2026-10-24T13:30:20.151552+00:00",
+      "finishedAt": "2026-10-24T13:30:21.886200+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T133020151552Z-final-payer-transfer-suite.log"
+    },
+    "final-production-web-build": {
+      "id": "final-production-web-build",
+      "startedAt": "2026-10-24T13:30:37.278711+00:00",
+      "finishedAt": "2026-10-24T13:30:39.379949+00:00",
+      "cwd": "/workspace/sotto/web",
+      "argv": [
+        "bash",
+        "-c",
+        "source /workspace/.setup/sotto-env.sh\nVITE_STATUS_URL=https://status.example.test npm exec -- vite build"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T133037278711Z-final-production-web-build.log"
+    },
+    "solution-patch-verification": {
+      "id": "solution-patch-verification",
+      "startedAt": "2026-10-24T13:27:01.019247+00:00",
+      "finishedAt": "2026-10-24T13:27:01.415096+00:00",
+      "cwd": "/workspace/sotto",
+      "argv": [
+        "python3",
+        "-c",
+        "from pathlib import Path; import tempfile,subprocess; patch=Path(\"/workspace/scratch/sotto-637/solution.patch\"); paths=subprocess.check_output([\"git\",\"diff\",\"--name-only\"],text=True).splitlines();\nwith tempfile.TemporaryDirectory(prefix=\"sotto-637-patch-\",dir=\"/tmp\") as directory:\n root=Path(directory)\n for path in paths:\n  target=root/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_bytes(subprocess.check_output([\"git\",\"show\",\"HEAD:\"+path]))\n subprocess.run([\"git\",\"apply\",\"--check\",str(patch)],cwd=root,check=True)\n subprocess.run([\"git\",\"apply\",str(patch)],cwd=root,check=True)\n for path in paths: assert (root/path).read_bytes()==Path(path).read_bytes(),path\nprint(\"Patch applies cleanly to the recorded upstream base and exactly reconstructs both edited files.\")"
+      ],
+      "exitCode": 0,
+      "output": "activity/20261024T132701019247Z-solution-patch-verification.log"
+    }
+  },
+  "contributorReviewApproved": true,
+  "commit": "e879c71f0e5a5d1b9e3d1219a89f80e7c5c040b8",
+  "codeBranchPushed": true,
+  "pullRequestCreated": false,
+  "publicationStatus": "Code pushed; evidence publication and PR creation in progress"
+}

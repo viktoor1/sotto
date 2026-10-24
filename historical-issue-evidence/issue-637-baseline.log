@@ -1,0 +1,13 @@
+
+> sotto-web@0.9.0 test
+> vitest run --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx
+
+
+ RUN  v5.0.0 /workspace/sotto/web
+
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  23:27:38
+   Duration  1.25s (environment 33%, tests 26%, transform 22%, import 18%)
+

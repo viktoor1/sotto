@@ -1,0 +1,24 @@
+web/src/__tests__/PayerTransferJourneys.test.tsx:291:  it("retries administrator loading for the selected organisation without starting a transfer", async () => {
+web/src/__tests__/PayerTransferJourneys.test.tsx:320:  it("keeps administrator retry single-flight and clears the old error while loading", async () => {
+web/src/__tests__/PayerTransferJourneys.test.tsx:362:  it("restores retry after another administrator failure and can recover on the next attempt", async () => {
+web/src/__tests__/PayerTransferJourneys.test.tsx:392:  it.each(["initial load", "retry"] as const)("treats an empty administrator %s as successful", async (phase) => {
+web/src/__tests__/PayerTransferJourneys.test.tsx:419:  it.each(["org-a", ""])("clears failed administrator recovery when selecting %j", async (nextOrganisation) => {
+web/src/__tests__/PayerTransferJourneys.test.tsx:451:  it.each(["quote", "submission"] as const)("does not offer administrator retry after a %s error", async (failure) => {
+web/src/PayerTransferStart.tsx:91:  const [membersError, setMembersError] = useState<string | null>(null);
+web/src/PayerTransferStart.tsx:92:  const [membersLoading, setMembersLoading] = useState(false);
+web/src/PayerTransferStart.tsx:97:  const membersInFlight = useRef(false);
+web/src/PayerTransferStart.tsx:98:  const formBusy = busy || membersLoading;
+web/src/PayerTransferStart.tsx:150:  async function chooseOrganisation(orgId: string) {
+web/src/PayerTransferStart.tsx:151:    if (membersInFlight.current) return;
+web/src/PayerTransferStart.tsx:162:  async function loadMembers(orgId: string) {
+web/src/PayerTransferStart.tsx:163:    if (orgId === "" || membersInFlight.current) return;
+web/src/PayerTransferStart.tsx:164:    membersInFlight.current = true;
+web/src/PayerTransferStart.tsx:172:      membersInFlight.current = false;
+web/src/PayerTransferStart.tsx:226:        <select value={destinationOrgId} onChange={(event) => void chooseOrganisation(event.target.value)} disabled={formBusy}>
+web/src/PayerTransferStart.tsx:231:      {destinationOrgId !== "" && <CounterpartySelect members={members} value={counterpartyId} onChange={(value) => { setCounterpartyId(value); setQuote(null); }} exclude={userId} disabled={formBusy} />}
+web/src/PayerTransferStart.tsx:232:      {membersError !== null && <p role="alert">{membersError}</p>}
+web/src/PayerTransferStart.tsx:233:      {(membersError !== null || membersLoading) && <button disabled={formBusy} onClick={() => void loadMembers(destinationOrgId)}>
+web/src/PayerTransferStart.tsx:234:        {membersLoading ? "Loading administrators…" : "Retry loading administrators"}
+web/src/PayerTransferStart.tsx:239:        ? <button disabled={formBusy || destinationOrgId === "" || counterpartyId === ""} onClick={() => void requestQuote()}>{busy ? "Loading transfer quote…" : "Review payer transfer"}</button>
+web/src/PayerTransferStart.tsx:243:          <button disabled={formBusy} onClick={() => void createInvitation()}>{busy ? "Sending request…" : "Send request for acceptance"}</button>{" "}
+web/src/PayerTransferStart.tsx:244:          <button disabled={formBusy} onClick={() => { setQuote(null); idempotencyKey.current = null; }}>Cancel</button>

@@ -1,0 +1,13 @@
+Verified recoverable copies of both edited files and the exact patch: /workspace/scratch/sotto-637/before-upstream-update-20261024T132424Z
+Running: git restore -- web/src/PayerTransferStart.tsx web/src/__tests__/PayerTransferJourneys.test.tsx
+Running: git switch -c fix/637-administrator-retry de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757
+Switched to a new branch 'fix/637-administrator-retry'
+## fix/637-administrator-retry
+ M web/src/PayerTransferStart.tsx
+ M web/src/__tests__/PayerTransferJourneys.test.tsx
+
+ web/src/PayerTransferStart.tsx                   |  37 ++++-
+ web/src/__tests__/PayerTransferJourneys.test.tsx | 183 +++++++++++++++++++++++
+ 2 files changed, 212 insertions(+), 8 deletions(-)
+
+Preserved upstream initial-discovery code and tests; no commit or push made.

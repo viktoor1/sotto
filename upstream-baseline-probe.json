@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757",
+  "cleanUpstreamVerified": true,
+  "runnerExitCode": 1,
+  "sameTimeoutObserved": true,
+  "repairRestored": true,
+  "restoredHashes": {
+    "web/src/PayerTransferStart.tsx": "93d5ac11ecddf99ba01a6c0d1985305e2f1a5ad5066cc4bddb26dd7004e179bf",
+    "web/src/__tests__/PayerTransferJourneys.test.tsx": "7f5665946c6062b4e2793ad46b934fcb2f0503fd6357f1317a906b00c1b82d23"
+  }
+}

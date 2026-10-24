@@ -1,0 +1,41 @@
+{
+  "stage": "regression-before-repair",
+  "sourceCommit": "07f32e5cbdc758ddebfbc8a431302b93d2daa98a",
+  "productionRepairApplied": false,
+  "existingTestsPassed": 12,
+  "newRegressionTestsFailed": 1,
+  "exitCode": 1,
+  "failure": "Missing accessible Retry loading administrators button",
+  "run": {
+    "id": "regression-before-repair",
+    "startedAt": "2026-10-24T13:15:49.557469+00:00",
+    "finishedAt": "2026-10-24T13:15:51.830288+00:00",
+    "cwd": "/workspace/sotto/web",
+    "argv": [
+      "bash",
+      "-c",
+      "source /workspace/.setup/sotto-env.sh\nnpm test -- --maxWorkers=1 src/__tests__/PayerTransferJourneys.test.tsx"
+    ],
+    "exitCode": 1,
+    "output": "activity/20261024T131549557469Z-regression-before-repair.log"
+  },
+  "patch": "stage-3-regression.patch",
+  "patchSha256": "c1e9763ddabb64303784e2a5eec1f726c293d7fce14428359a86c670e5666a37",
+  "verifiedBeforeFailure": [
+    "accessible service error",
+    "organisation remains org-b",
+    "blank administrator selection",
+    "review disabled",
+    "one members request",
+    "no quote request",
+    "no transfer request"
+  ],
+  "notYetVerified": [
+    "successful retry",
+    "pending and duplicate request prevention",
+    "repeated failure",
+    "successful empty result",
+    "selection resets",
+    "quote/submission isolation"
+  ]
+}

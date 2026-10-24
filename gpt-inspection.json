@@ -1,0 +1,12 @@
+{
+  "selectedStep": "Load administrators",
+  "view": "Diff",
+  "source": "web/src/PayerTransferStart.tsx",
+  "function": "PersonalTransferStart.chooseOrganisation → chooseOrganisation / loadMembers · proposal",
+  "evidenceLabel": "PROPOSED",
+  "addedLines": 25,
+  "removedLines": 12,
+  "nextStep": "GET organisation members",
+  "journalCheckpoints": 6,
+  "scriptErrors": []
+}

@@ -1,0 +1,29 @@
+189-        uses: jetli/wasm-pack-action@0d096b08b4e5a7de8c28de67e11e945404e9eefa # v0.4.0
+190-        with:
+191-          version: "v0.15.0"
+192:      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+193-        with:
+194:          node-version: 22
+195-          cache: npm
+196-          cache-dependency-path: web/package-lock.json
+197-      - name: Install web deps
+--
+201-      - name: Generate WASM bindings
+202-        run: npm run build:wasm
+203-      - name: Typecheck
+204:        run: npm run typecheck
+205-      - name: Unit tests (vitest)
+206:        run: npm test
+207-      - name: Build (vite bundle)
+208-        run: npx vite build
+209-      - name: WASM smoke (crypto core loads)
+--
+308-        uses: jetli/wasm-pack-action@0d096b08b4e5a7de8c28de67e11e945404e9eefa # v0.4.0
+309-        with:
+310-          version: "v0.15.0"
+311:      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+312-        with:
+313:          node-version: 22
+314-          cache: npm
+315-          cache-dependency-path: web/package-lock.json
+316-

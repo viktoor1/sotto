@@ -1,0 +1,32 @@
+
+> sotto-web@0.9.0 test
+> vitest run --maxWorkers=1 src/__tests__/base64.test.tsx
+
+
+ RUN  v5.0.5 /workspace/sotto/web
+
+ ❯ src/__tests__/base64.test.tsx (9 tests | 1 failed) 21626ms
+   ❯ base64 helpers (9)
+     × matches an independent encoder and round-trips 1048576 binary bytes 18711ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/base64.test.tsx > base64 helpers > matches an independent encoder and round-trips 1048576 binary bytes
+Error: Test timed out in 15000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/__tests__/base64.test.tsx:32:45
+     30|   });
+     31|
+     32|   it.each([32767, 32768, 32769, 1024 * 1024])(
+       |                                             ^
+     33|     "matches an independent encoder and round-trips %i binary bytes",
+     34|     (length) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 passed (9)
+   Start at  13:27:58
+   Duration  23.36s (tests 97%, environment 3%)
+

@@ -1,0 +1,21 @@
+[fix/637-administrator-retry e879c71] fix(web): retry administrator loading for payer transfers
+ 2 files changed, 212 insertions(+), 8 deletions(-)
+commit e879c71f0e5a5d1b9e3d1219a89f80e7c5c040b8
+Author:     Ivanov Viktor <iviktoor10@gmail.com>
+AuthorDate: Sat Oct 24 13:43:54 2026 +0000
+Commit:     Ivanov Viktor <iviktoor10@gmail.com>
+CommitDate: Sat Oct 24 13:43:54 2026 +0000
+
+    fix(web): retry administrator loading for payer transfers
+    
+    Allow retrying member discovery for the selected organisation without
+    resetting it or invoking quote or transfer APIs. Keep discovery errors
+    separate and prevent overlapping requests with an immediate lock.
+    
+    Cover pending retries, repeated failures, empty responses, selection
+    resets and quote/submission error isolation with component tests.
+    
+    Signed-off-by: Ivanov Viktor <iviktoor10@gmail.com>
+
+## fix/637-administrator-retry
+

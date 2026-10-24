@@ -1,0 +1,7 @@
+Branch: fix/637-administrator-retry
+Base: de5a0e477ff70ff8dcd2493ce2d9dcb4e90fd757
+Only edited files: ['web/src/PayerTransferStart.tsx', 'web/src/__tests__/PayerTransferJourneys.test.tsx']
+Sponsored transfer and upstream initial-discovery functions unchanged.
+Original work branch: 07f32e5cbdc758ddebfbc8a431302b93d2daa98a
+New contribution commits: 0
+Saved complete solution.patch
