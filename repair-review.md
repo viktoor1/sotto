@@ -1,5 +1,7 @@
 # Sotto #637: repair ready for review
 
+**Submission complete:** [PR #703](https://github.com/getsotto/sotto/pull/703) is open. The welcome workflow passed; main CI is awaiting maintainer approval. [Current submission record](PR-703.md). Earlier preparation/status paragraphs below are retained as the investigation record.
+
 The contributor approved this review and its documented test limitation on
 24 October 2026. The repair is committed as `e879c71` with DCO sign-off and pushed
 to the fork. The evidence is published separately; API access blocked PR creation,

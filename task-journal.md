@@ -529,3 +529,41 @@ states the exact activity-record cutoff. Creating a local archive did not upload
 - Remaining action: the contributor opens the prepared page in their signed-in
   browser and clicks Create pull request. They will write their own follow-up
   issue comment. Neither an issue comment nor a merge has been performed.
+
+
+## Stage 6: contributor opened pull request #703
+
+24 October 2026, Europe/Budapest.
+
+- The contributor opened the prepared comparison. The embedded browser was signed
+  out, and repeated Google sign-in attempts showed a GitHub 500 page. The assistant
+  recommended signing in first using the contributor's regular browser, then using
+  a short comparison URL to avoid the long authentication return URL. The underlying
+  sign-in failure was not diagnosed. No account credentials or private desktop
+  screenshots were saved in this evidence folder.
+- The browser then showed the correct upstream base and fork head, one commit,
+  two files and the final PR form. Its initial body combined the commit message
+  with unfilled template fields. The assistant supplied a complete body with the
+  summary, `Closes #637`, exact validation limitation, HTML/discovery/journal/download
+  links and the verified DCO checkbox. The contributor pasted and reviewed it.
+- The contributor clicked Create pull request and supplied a screenshot showing
+  https://github.com/getsotto/sotto/pull/703. The assistant attached that actual PR
+  to this task and retrieved the public page, confirming it is open, targets main,
+  contains commit `e879c71`, links issue #637, and includes the evidence links and
+  Base64 limitation. No PR body was changed after the contributor submitted it.
+- The contributor asked about the automatic comment. It is the repository's
+  standard first-contributor greeting from `github-actions[bot]`, with general DCO
+  and test reminders. It is not a specific failed-check report. The contribution
+  commit's required Signed-off-by trailer was verified again.
+- The public Checks page showed Greet first-time contributors succeeded in six
+  seconds. Its annotations concern GitHub Actions platform changes, Node action
+  runtimes and runner-image migration. Those annotations are separate from the
+  application's regression checks. The other workflow run statuses were checked
+  separately rather than treating the greeting as proof that all CI passed.
+- The contributor still intends to write their own follow-up issue comment.
+  No issue comment or merge was performed by the assistant.
+- Current main CI run `40100512700` returned HTTP 200 and explicitly states
+  `This workflow is awaiting approval from a maintainer in #703`, with status
+  `Action required`. This is the first-contributor/fork workflow approval gate,
+  not a reported test failure. The assistant cannot approve an upstream workflow
+  run on behalf of a maintainer. No application-CI pass is claimed at this point.

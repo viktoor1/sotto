@@ -1,8 +1,8 @@
 {
-  "publishedAt": "2026-10-24T13:47:22.125087+00:00",
+  "publishedAt": "2026-10-24T13:49:41.811669+00:00",
   "branch": "evidence/637-investigation",
-  "commit": "ed8541c16b51a58ef6332370065d33a243e06cc7",
-  "fileCount": 137,
+  "commit": "f86ec7462597b751bf036859f0018e66129df2ce",
+  "fileCount": 147,
   "url": "https://github.com/viktoor1/sotto/tree/evidence/637-investigation",
   "codeCommit": "e879c71f0e5a5d1b9e3d1219a89f80e7c5c040b8",
   "scope": "authorised issue-specific documentation, HTML, journal and evidence only"

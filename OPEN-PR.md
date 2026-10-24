@@ -1,3 +1,9 @@
+# PR created: #703
+
+[Open the actual pull request](https://github.com/getsotto/sotto/pull/703). The contributor completed the steps below. CI currently awaits maintainer approval.
+
+The following instructions are retained as the historical browser submission path.
+
 # Open the prepared Sotto #637 pull request
 
 The repair and its documentation are already pushed to your fork. The GitHub API

@@ -1,5 +1,7 @@
 # Sotto #637: discovery and repair record
 
+**Submission complete:** [PR #703](https://github.com/getsotto/sotto/pull/703) is open. The welcome workflow passed; main CI is awaiting maintainer approval. [Current submission record](PR-703.md). Earlier preparation/status paragraphs below are retained as the investigation record.
+
 Status: review approved on 24 October 2026; repair committed with DCO sign-off as
 `e879c71` and pushed to the contributor's fork. The evidence branch is published.
 PR creation awaits the prefilled browser form in `OPEN-PR.md` after an API access

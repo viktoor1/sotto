@@ -1,0 +1,33 @@
+Running: git clone --depth 1 --branch evidence/637-investigation https://github.com/viktoor1/sotto.git /tmp/sotto-637-evidence-ee4b4t3j
+Cloning into '/tmp/sotto-637-evidence-ee4b4t3j'...
+Running: git config user.name Ivanov Viktor
+Running: git config user.email iviktoor10@gmail.com
+Issue-specific evidence files copied: 147
+Running: git add --all
+Running: git diff --cached --check -- README.md repair-review.md discovery-path.md pr-body.md publish-evidence.py
+Running: git commit --signoff -m docs: record Sotto #637 investigation and verification
+[evidence/637-investigation f86ec74] docs: record Sotto #637 investigation and verification
+ 17 files changed, 1663 insertions(+), 16 deletions(-)
+ create mode 100644 OPEN-PR.md
+ create mode 100644 activity/20261024-upstream-compare.html
+ create mode 100644 activity/20261024T134718782399Z-publish-investigation-records-retry.log
+ create mode 100644 activity/20261024T134757814608Z-create-pull-request.log
+ create mode 100644 activity/20261024T134757825614Z-verify-public-investigation.log
+ create mode 100644 activity/20261024T134831781776Z-prepare-browser-pr-submission.log
+ create mode 100644 activity/20261024T134850989320Z-inspect-browser-comparison.log
+ create mode 100644 create-pr-url.txt
+ create mode 100644 evidence-publication.json
+ create mode 100644 submission-status.json
+Running: git push --set-upstream origin HEAD:refs/heads/evidence/637-investigation
+To https://github.com/viktoor1/sotto.git
+   ed8541c..f86ec74  HEAD -> evidence/637-investigation
+branch 'evidence/637-investigation' set up to track 'origin/evidence/637-investigation'.
+{
+  "publishedAt": "2026-10-24T13:49:41.811669+00:00",
+  "branch": "evidence/637-investigation",
+  "commit": "f86ec7462597b751bf036859f0018e66129df2ce",
+  "fileCount": 147,
+  "url": "https://github.com/viktoor1/sotto/tree/evidence/637-investigation",
+  "codeCommit": "e879c71f0e5a5d1b9e3d1219a89f80e7c5c040b8",
+  "scope": "authorised issue-specific documentation, HTML, journal and evidence only"
+}

@@ -1,0 +1,5 @@
+## fix/637-administrator-retry
+
+Published browser guide verified HTTP 200
+Code commit and exact two-file scope match reviewed tests. Evidence: https://github.com/viktoor1/sotto/tree/evidence/637-investigation
+PR not created; requires prepared browser form due API Forbidden.

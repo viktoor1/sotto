@@ -1,0 +1,17 @@
+checks HTTP 200
+Integrate external tools | DEVELOPER WORKFLOWS | Actions | Automate any workflow | Codespaces
+Actions | Automate any workflow | Codespaces | Instant dev environments | Issues
+) | Checks | Files changed | Open | fix(web): retry administrator loading for payer transfers
+Loading | Failed to load commit list. | Uh oh! | There was an error while loading. | Please reload this page
+2 warnings and 1 notice | .github/workflows/greet.yml#L1 | On December 2, 2026, GitHub will restrict `pull_request_target` on public repositories by default. To continue allowing the event trigger, configure an Actions policy. Learn more: | https://gh.io/securely-using-pull_request_target#default-policy-for-pull_request_target | Show more
+merge_box HTTP 200
+Integrate external tools | DEVELOPER WORKFLOWS | Actions | Automate any workflow | Codespaces
+Actions | Automate any workflow | Codespaces | Instant dev environments | Issues
+) | Checks | Files changed | Open | fix(web): retry administrator loading for payer transfers
+Copy Markdown | Summary: Add retry for failed administrator loading while preserving the selected organisation. Prevent overlapping requests and keep discovery errors separate from quote/submission errors. | Closes | #637 | Tests:
+28 payer-transfer component tests passed, including nine new regression cases. | TypeScript checks and production build passed. | Full web suite: 272 passed, 1 failed. The existing 1 MiB Base64 test exceeded its 15-second limit. The same timeout reproduced on clean upstream with this repair removed. | Investigation documentation: | Interactive HTML walkthrough
+TypeScript checks and production build passed. | Full web suite: 272 passed, 1 failed. The existing 1 MiB Base64 test exceeded its 15-second limit. The same timeout reproduced on clean upstream with this repair removed. | Investigation documentation: | Interactive HTML walkthrough | Discovery path
+e879c71 | Allow retrying member discovery for the selected organisation without resetting it or invoking quote or transfer APIs. Keep discovery errors separate and prevent overlapping requests with an immediate lock. Cover pending retries, repeated failures, empty responses, selection resets and quote/submission error isolation with component tests. Signed-off-by: Ivanov Viktor <iviktoor10@gmail.com> | github-actions | Bot | commented
+Development | Successfully merging this pull request may close these issues. | Web: retry failed administrator loading without changing the payer-transfer organisation | Uh oh! | There was an error while loading.
+Successfully merging this pull request may close these issues. | Web: retry failed administrator loading without changing the payer-transfer organisation | Uh oh! | There was an error while loading. | Please reload this page
+This suggestion has been applied or marked resolved. | Suggestions cannot be applied from pending reviews. | Suggestions cannot be applied on multi-line comments. | Suggestions cannot be applied while the pull request is queued to merge. | Suggestion cannot be applied right now. Please check back later.

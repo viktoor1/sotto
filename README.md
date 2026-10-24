@@ -1,5 +1,7 @@
 # Sotto #637 interactive investigation
 
+**Submission complete:** [PR #703](https://github.com/getsotto/sotto/pull/703) is open. The welcome workflow passed; main CI is awaiting maintainer approval. [Current submission record](PR-703.md). Earlier preparation/status paragraphs below are retained as the investigation record.
+
 Open **`interactive-walkthrough.html`** to explore the investigation. It is a self-contained HTML application: its styles, scripts, source excerpts, baseline evidence and selected journal checkpoints are embedded. It needs no npm installation or build step.
 
 Contribution progress after that snapshot is recorded in [discovery-path.md](discovery-path.md), [task-journal.md](task-journal.md) and [activity.jsonl](activity.jsonl). The 24 October reproduction remains recorded as an expected failure against original production code. The contributor has reviewed and approved the repair; commit `e879c71` is signed off and pushed to the fork. The evidence branch is published; PR creation awaits the prefilled browser page in [OPEN-PR.md](OPEN-PR.md), because the API request returned Forbidden. [repair-review.md](repair-review.md) covers nine new regression cases and validation: 28 focused tests passed; TypeScript and build passed; the full web suite has one existing Base64 timeout reproduced on clean upstream. Earlier walkthrough validation reports remain unchanged and refer to their historical source snapshot.
